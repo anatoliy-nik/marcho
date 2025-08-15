@@ -1,4 +1,13 @@
 body {
-    background-color: pink;
-    text-align: center;
+    font-size: 16px;
+    color: $default-light-color;
+    line-height: 26px;
+    font-family: 'Quicksand-Medium', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 1px dotted #ccc;
 }
