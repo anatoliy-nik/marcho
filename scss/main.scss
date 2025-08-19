@@ -2,4 +2,189 @@
 @import '_fonts.scss';
 @import '_reset';
 @import '_global.scss';
+
+.logo-link {
+    display: block;
+}
+
+// header
+
+.header {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+        background-color: #fff;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+    &__item + .menu__item {
+        margin-left: 38px;
+    }
+    &__link {
+        color: $default-dark-color;
+        text-transform: uppercase;
+        padding: 2px;
+        transition: all .3s;
+        font-family: 'Roboto-Regular', sans-serif;
+        font-weight: 400;
+        &:hover {
+            color: $accent-color;
+            border-bottom: 1px solid $accent-color;
+        }
+    }
+    &__link--active {
+        color: $accent-color;
+        border-bottom: 1px solid $accent-color;
+    }
+}
+
+.user-nav {
+    &__list {
+        display: flex;
+    }
+    &__item + .user-nav__item {
+        margin-left: 25px;
+    }
+    &__link {
+        height: 20px;
+        width: 20px;
+        background-image: url(../img/icons/user.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 20px 20px;
+        display: block;
+        position: relative;
+    }
+    &__item:nth-child(2) .user-nav__link {
+        background-image: url(../img/icons/search.svg);
+    }
+    &__item:nth-child(3) .user-nav__link {
+        background-image: url(../img/icons/heart.svg);
+    }
+    &__item:nth-child(3) .user-nav__link {
+        background-image: url(../img/icons/cart.svg);
+    }
+    &__number {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: $accent-color;
+        border-radius: 50%;
+        top: -50%;
+        right: -50%;
+        color: #fff;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+// footer
+
+.footer {
+    background-color: $bg-gray;
+}
+
+.footer-title {
+    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 36px;
+    color: $default-dark-color;
+    font-family: 'Roboto-Medium', sans-serif;
+    font-weight: 500;
+}
+
+.footer-top {
+    padding: 70px 0 40px 0;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    &__item {
+        // border: 1px dotted red;
+    }
+    &__item + .footer-top__item {
+        margin-left: 30px;
+    }
+    &__contact {
+        width: 270px;
+    }
+    &__contact .footer-top__list {
+        margin-bottom: 30px;
+    }
+    &__info {
+        width: 170px;
+    }
+    &__subscribe {
+        max-width: 470px;
+    }
+    &__subscribe p {
+        margin-bottom: 30px;
+    }
+    &__list-link {
+        font-size: 16px;
+        // line-height: 36px;
+        margin-bottom: 15px;
+        display: block;
+        color: $default-light-color;
+        font-family: 'Quicksand-Medium', sans-serif;
+        font-weight: 500;
+    }
+    &__list-link:hover {
+        text-decoration: underline;
+    }
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__form-input {
+        background-color: #fff;
+        padding: 18px 20px;
+        max-width: 320px;
+        width: 100%;
+        border: none;
+        box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    }
+}
+
+.footer-bottom {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.accept {
+    display: flex;
+    align-items: center;
+    &__list {
+        display: flex;
+    }
+    &__item {
+        margin-left: 22px;
+    }
+}
+
+.social-list {
+    display: flex;
+    &__item + .social-list__item {
+        margin-left: 20px;
+    }
+    &__link path {
+        fill: $default-light-color;
+    }
+    &__link:hover {
+       path {
+        fill: $accent-color;
+    } 
+    }
+}
+
+
+// _media.scss всегда в конце
 @import '_media.scss'
