@@ -54,12 +54,29 @@ a {
   text-decoration: none;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-size: 16px;
   color: #8d8d8d;
   line-height: 26px;
   font-family: "Quicksand-Medium", sans-serif;
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .container {
@@ -67,6 +84,21 @@ body {
   margin: 0 auto;
   padding: 0 15px;
   border: 1px dotted #ccc;
+}
+
+.accent-btn {
+  border: none;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Roboto-Regular", sans-serif;
+  background-color: #fe3e57;
+  padding: 18px 25px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+          box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 }
 
 .logo-link {
@@ -174,9 +206,6 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
-.footer-top__item {
-  border: 1px dotted red;
-}
 .footer-top__item + .footer-top__item {
   margin-left: 30px;
 }
@@ -205,6 +234,54 @@ body {
 }
 .footer-top__list-link:hover {
   text-decoration: underline;
+}
+.footer-top__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer-top__form-input {
+  background-color: #fff;
+  padding: 18px 20px;
+  max-width: 320px;
+  width: 100%;
+  border: none;
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+          box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+}
+
+.footer-bottom {
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 12px;
+}
+
+.accept {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.accept__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.accept__item {
+  margin-left: 22px;
 }
 
 .social-list {
