@@ -3,6 +3,12 @@
 @import '_reset';
 @import '_global.scss';
 
+.logo-link {
+    display: block;
+}
+
+// header
+
 .header {
     &__wrapper {
         display: flex;
@@ -26,6 +32,7 @@
         padding: 2px;
         transition: all .3s;
         font-family: 'Roboto-Regular', sans-serif;
+        font-weight: 400;
         &:hover {
             color: $accent-color;
             border-bottom: 1px solid $accent-color;
@@ -77,6 +84,76 @@
         text-align: center;
     }
 }
+
+// footer
+
+.footer {
+    background-color: $bg-gray;
+}
+
+.footer-title {
+    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 36px;
+    color: $default-dark-color;
+    font-family: 'Roboto-Medium', sans-serif;
+    font-weight: 500;
+}
+
+.footer-top {
+    padding: 70px 0 40px 0;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    &__item {
+        border: 1px dotted red;
+    }
+    &__item + .footer-top__item {
+        margin-left: 30px;
+    }
+    &__contact {
+        width: 270px;
+    }
+    &__contact .footer-top__list {
+        margin-bottom: 30px;
+    }
+    &__info {
+        width: 170px;
+    }
+    &__subscribe {
+        max-width: 470px;
+    }
+    &__subscribe p {
+        margin-bottom: 30px;
+    }
+    &__list-link {
+        font-size: 16px;
+        // line-height: 36px;
+        margin-bottom: 15px;
+        display: block;
+        color: $default-light-color;
+        font-family: 'Quicksand-Medium', sans-serif;
+        font-weight: 500;
+    }
+    &__list-link:hover {
+        text-decoration: underline;
+    }
+}
+
+.social-list {
+    display: flex;
+    &__item + .social-list__item {
+        margin-left: 20px;
+    }
+    &__link path {
+        fill: $default-light-color;
+    }
+    &__link:hover {
+       path {
+        fill: $accent-color;
+    } 
+    }
+}
+
 
 // _media.scss всегда в конце
 @import '_media.scss'
