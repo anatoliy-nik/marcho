@@ -94,7 +94,7 @@
     background-image: url(../img/slider/bg-slider.png);
     background-repeat: no-repeat;
     background-position: center center;
-    height: 700px;
+    min-height: 632px;
     &__container {
         max-width: 1460px;
         margin: 0 auto;
@@ -125,6 +125,44 @@
     }
     &__btn {
         display: inline-block;
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: -70px;
+        li {
+            margin: 0 5px;
+        }
+        button {
+            width: 28px;
+            height: 28px;
+            color: transparent;
+            // font-size: 0;
+            // line-height: 0;
+            border-radius: 50%;
+            // border: 1px solid $default-light-color;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                background-color: $default-light-color;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        li.slick-active button {
+            border: 1px solid $accent-color;
+            &::before {
+                background-color: $accent-color;
+            }
+        }
     }
 }
 

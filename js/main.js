@@ -2,7 +2,8 @@ $(function () {
 
     $('.top-slider__wrapper').slick({
         dots: true,
-        arrows: false
+        arrows: false,
+        autoplay: true
     });
 
 });
