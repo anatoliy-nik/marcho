@@ -2,26 +2,31 @@
   font-family: "Quicksand-Medium";
   src: url("../fonts/Quicksand-Medium.woff2") format("woff2");
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Quicksand-Regular";
   src: url("../fonts/Quicksand-Regular.woff2") format("woff2");
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Roboto-Bold";
   src: url("../fonts/Roboto-Bold.woff2") format("woff2");
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Roboto-Medium";
   src: url("../fonts/Roboto-Medium.woff2") format("woff2");
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Roboto-Regular";
   src: url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-style: normal;
+  font-display: swap;
 }
 *,
 *::before,
@@ -92,7 +97,7 @@ body {
   line-height: 26px;
   font-family: "Roboto-Regular", sans-serif;
   background-color: #fe3e57;
-  padding: 18px 25px;
+  padding: 15px 35px;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
@@ -186,6 +191,58 @@ body {
   text-align: center;
 }
 
+.top-slider {
+  background-color: #f6f6f6;
+  background-image: url(../img/slider/bg-slider.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 700px;
+}
+.top-slider__container {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-left: 145px;
+  border: 1px dotted #ccc;
+}
+.top-slider__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.top-slider__content {
+  max-width: 570px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.top-slider__title {
+  font-family: "Roboto-Bold", sans-serif;
+  font-size: 58px;
+  line-height: 68px;
+  color: #29282d;
+  margin-bottom: 40px;
+}
+.top-slider__text {
+  margin-bottom: 60px;
+}
+.top-slider__btn {
+  display: inline-block;
+}
+
 .footer {
   background-color: #f6f6f6;
 }
@@ -248,7 +305,7 @@ body {
 }
 .footer-top__form-input {
   background-color: #fff;
-  padding: 18px 20px;
+  padding: 15px 20px;
   max-width: 320px;
   width: 100%;
   border: none;
