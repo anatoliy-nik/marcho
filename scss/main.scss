@@ -85,6 +85,87 @@
     }
 }
 
+// main
+
+// top-slider
+
+.top-slider {
+    background-color: $bg-gray;
+    background-image: url(../img/slider/bg-slider.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 632px;
+    &__container {
+        max-width: 1460px;
+        margin: 0 auto;
+        padding: 0 15px;
+        padding-left: 145px;
+        border: 1px dotted #ccc;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        max-width: 570px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    &__title {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-size: 58px;
+        line-height: 68px;
+        color: $default-dark-color;
+        margin-bottom: 40px;
+    }
+    &__text {
+        margin-bottom: 60px;
+    }
+    &__btn {
+        display: inline-block;
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: -70px;
+        li {
+            margin: 0 5px;
+        }
+        button {
+            width: 28px;
+            height: 28px;
+            color: transparent;
+            // font-size: 0;
+            // line-height: 0;
+            border-radius: 50%;
+            // border: 1px solid $default-light-color;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                background-color: $default-light-color;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        li.slick-active button {
+            border: 1px solid $accent-color;
+            &::before {
+                background-color: $accent-color;
+            }
+        }
+    }
+}
+
 // footer
 
 .footer {
@@ -144,7 +225,7 @@
     }
     &__form-input {
         background-color: #fff;
-        padding: 18px 20px;
+        padding: 15px 20px;
         max-width: 320px;
         width: 100%;
         border: none;
