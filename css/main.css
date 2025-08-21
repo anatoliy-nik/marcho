@@ -80,7 +80,6 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-  border: 1px dotted #ccc;
 }
 
 .accent-btn {
@@ -243,6 +242,47 @@ body {
 }
 .top-slider .slick-dots li.slick-active button::before {
   background-color: #fe3e57;
+}
+
+.info {
+  padding: 120px 0;
+  background-image: url(../img/decor/info-left.png), url(../img/decor/info-right.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top right;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages__item {
+  width: 370px;
+  padding: 60px 40px;
+  box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+}
+.advantages__img {
+  width: 60px;
+  height: 60px;
+  background-color: #ffb534;
+  background-image: url(../img/decor/car.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 40px;
+}
+.advantages__item:nth-child(2) .advantages__img {
+  background-color: #34c3ff;
+  background-image: url(../img/decor/circle.png);
+}
+.advantages__item:nth-child(3) .advantages__img {
+  background-color: #fe3e57;
+  background-image: url(../img/decor/hand.png);
+}
+.advantages__title {
+  font-family: "Roboto-Regular", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: #29282d;
+  margin-bottom: 20px;
 }
 
 .footer {
