@@ -87,6 +87,7 @@ body {
   font-size: 16px;
   line-height: 26px;
   font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
   background-color: #fe3e57;
   padding: 15px 35px;
   text-transform: uppercase;
@@ -94,6 +95,17 @@ body {
   cursor: pointer;
   display: inline-block;
   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+}
+
+.section-title {
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: 700;
+  color: #29282d;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 26px;
+  margin-bottom: 28px;
+  text-align: center;
 }
 
 .logo-link {
@@ -197,6 +209,7 @@ body {
 }
 .top-slider__title {
   font-family: "Roboto-Bold", sans-serif;
+  font-weight: 700;
   font-size: 58px;
   line-height: 68px;
   color: #29282d;
@@ -245,20 +258,50 @@ body {
 }
 
 .info {
-  padding: 120px 0;
+  padding: 110px 0;
   background-image: url(../img/decor/info-left.png), url(../img/decor/info-right.png);
   background-repeat: no-repeat, no-repeat;
-  background-position: top left, top right;
+  background-position: top 310px left, top 310px right;
+  background-size: initial;
 }
 
 .advantages__list {
   display: flex;
   justify-content: space-between;
+  padding: 0px 0px;
+  margin-bottom: 110px;
+  border: 1px dotted green;
+  position: relative;
+}
+.advantages__list::before {
+  content: "";
+  position: absolute;
+  top: -44px;
+  left: -44px;
+  width: 122px;
+  height: 122px;
+  background-image: url(../img/decor/advantages-left-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+}
+.advantages__list::after {
+  content: "";
+  position: absolute;
+  right: -66px;
+  bottom: -66px;
+  width: 122px;
+  height: 122px;
+  background-image: url(../img/decor/advantages-right-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
 }
 .advantages__item {
   width: 370px;
   padding: 60px 40px;
   box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+  background-color: #fff;
 }
 .advantages__img {
   width: 60px;
@@ -279,10 +322,92 @@ body {
 }
 .advantages__title {
   font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
   color: #29282d;
   margin-bottom: 20px;
+}
+
+.top-categories {
+  padding: 0px 0px;
+  border: 1px dotted green;
+}
+.top-categories__text {
+  max-width: 570px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 55px;
+}
+.top-categories__list {
+  display: grid;
+  min-height: 635px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+.top-categories__item {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 40px;
+}
+.top-categories__item:nth-child(1) {
+  grid-row: span 2;
+}
+.top-categories__item:nth-child(1) .top-categories__item-accent {
+  color: #5800e4;
+}
+.top-categories__item:nth-child(1) .top-categories__item-link:hover {
+  color: #5800e4;
+  text-decoration: underline;
+}
+.top-categories__item:nth-child(2) {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.top-categories__item:nth-child(2) .top-categories__item-accent {
+  color: #fe3e57;
+}
+.top-categories__item:nth-child(2) .top-categories__item-link:hover {
+  color: #fe3e57;
+  text-decoration: underline;
+}
+.top-categories__item:nth-child(3) .top-categories__item-accent {
+  color: #ffb534;
+}
+.top-categories__item:nth-child(3) .top-categories__item-link:hover {
+  color: #ffb534;
+  text-decoration: underline;
+}
+.top-categories__item:nth-child(4) .top-categories__item-accent {
+  color: #34c3ff;
+}
+.top-categories__item:nth-child(4) .top-categories__item-link:hover {
+  color: #34c3ff;
+  text-decoration: underline;
+}
+.top-categories__item-accent {
+  margin-bottom: 8px;
+}
+.top-categories__item-title {
+  font-family: "Roboto-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #29282d;
+  margin-bottom: 10px;
+}
+.top-categories__item-link {
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #29282d;
+  text-transform: uppercase;
+  transition: all 0.3s;
 }
 
 .footer {
