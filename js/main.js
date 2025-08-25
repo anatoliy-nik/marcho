@@ -6,4 +6,8 @@ $(function () {
         autoplay: true
     });
 
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
+
 });
