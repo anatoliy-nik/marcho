@@ -20,7 +20,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    // border: 1px dotted #ccc;
+    border: 1px dotted #ccc;
 }
 
 .accent-btn {
@@ -40,6 +40,7 @@ body {
 
 .default-btn {
     border: 1px solid $accent-color;
+    // border-bottom: 1px solid $accent-color;
     font-size: 16px;
     line-height: 26px;
     font-family: 'Roboto-Regular', sans-serif;
