@@ -38,6 +38,20 @@ body {
     box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 }
 
+.default-btn {
+    border: 1px solid $accent-color;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    color: $default-dark-color;
+    cursor: pointer;
+    display: inline-block;
+}
+
 .section-title {
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
