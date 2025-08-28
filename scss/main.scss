@@ -202,8 +202,8 @@
         &::after {
             content: '';
             position: absolute;
-            right: -66px;
-            bottom: -66px;
+            right: -50px;
+            bottom: -56px;
             width: 122px;
             height: 122px;
             background-image: url(../img/decor/advantages-right-icon.svg);
@@ -541,6 +541,7 @@
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
         span {
             font-family: 'Roboto-Bold', sans-serif;
             font-weight: 700;
@@ -554,6 +555,7 @@
     }
 }
 
+
 // brands
 
 .brands {
@@ -562,6 +564,124 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+// blog
+
+.blog {
+    padding: 10px 0 110px 0;
+    background-image: url(../img/blog/decor-bg.svg);
+    background-repeat: no-repeat;
+    background-position: top 330px center;
+    &__text {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+
+// blog-box
+
+.blog-box {
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -70px;
+        right: -30px;
+        width: 140px;
+        height: 140px;
+        background-image: url(../img/decor/blog-right-top.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: -1;
+    }
+    &__item {
+        max-width: 370px;
+        border: 1px solid #ececec;
+        transition: all .3s;
+    }
+    &__item:hover {
+        box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+        border: none;
+        .blog-box__link {
+            color: $accent-color;
+            &::before {
+                background-image: url(../img/decor/blog-arrow-accent.svg);
+            }
+        }
+    }
+    &__img-link {
+        display: block;
+        img {
+            object-fit: cover;
+            // всегда надо делать для img, т.к. могут быть разные
+            width: 370px;
+            height: 280px;
+            // самой картинке задается width и height,
+            // а ее родителю max-width
+        }
+    }
+    &__item-content {
+        padding: 40px 30px;
+    }
+    &__info {
+        margin-bottom: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__author-link, &__date {
+        color: $default-light-color;
+        position: relative;
+        padding-left: 30px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url(../img/decor/blog-user.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 20px;
+        }
+    }
+    &__date::before {
+        background-image: url(../img/decor/blog-clock.svg);
+    }
+    &__title-link {
+        display: block;
+        margin-bottom: 22px;
+        font-family: 'Roboto-Regular', sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 32px;
+        color: $default-dark-color;
+    }
+    &__link {
+        display: inline-block;
+        color: $default-light-color;
+        position: relative;
+        padding-right: 20px;
+        transition: all .3s;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            background-image: url(../img/decor/blog-arrow.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 10px;
+        }
     }
 }
 
