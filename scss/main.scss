@@ -15,7 +15,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 40px 0;
-        background-color: #fff;
+        // background-color: #fff;
     }
 }
 
@@ -705,7 +705,7 @@
     }
 }
 
-// login
+// login register
 
 .login {
     padding: 120px 0;
@@ -755,6 +755,37 @@
         margin-bottom: 35px;
     }
 }
+
+// page 404
+
+.page-404 {
+    padding: 120px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__content {
+        max-width: 570px;
+        width: 100%;
+    }
+    &__title {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 26px;
+        margin-bottom: 35px;
+        color: #28384f;
+
+    }
+    &__text {
+        margin-bottom: 60px;
+    }
+    &__img {
+        width: 570px;
+    }
+}
+
 
 // footer
 

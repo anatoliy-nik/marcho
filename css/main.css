@@ -208,6 +208,10 @@ body {
   color: #fe3e57;
 }
 
+.header--page-404 {
+  background-color: #f6f6f6;
+}
+
 .logo-link {
   display: block;
 }
@@ -223,7 +227,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 40px 0;
-  background-color: #fff;
 }
 
 .menu__list {
@@ -1023,6 +1026,39 @@ body {
 }
 .login-form__text {
   margin-bottom: 35px;
+}
+
+.page-404 {
+  padding: 120px 0;
+}
+.page-404__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page-404__content {
+  max-width: 570px;
+  width: 100%;
+}
+.page-404__title {
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 26px;
+  margin-bottom: 35px;
+  color: #28384f;
+}
+.page-404__text {
+  margin-bottom: 60px;
+}
+.page-404__img {
+  width: 570px;
 }
 
 .footer {
