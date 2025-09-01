@@ -1021,6 +1021,9 @@ body {
   color: #fe3e57;
   display: inline-block;
 }
+.login-form__text {
+  margin-bottom: 35px;
+}
 
 .footer {
   background-color: #f6f6f6;
