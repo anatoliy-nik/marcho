@@ -1,7 +1,7 @@
 $(function () {
 
-    // Слайдер
-    $('.top-slider__wrapper').slick({
+    // SlickSlider
+    $(".top-slider__wrapper").slick({
         dots: true,
         arrows: false,
         autoplay: true
@@ -12,6 +12,7 @@ $(function () {
         // Your custom options
     });
 
+   
     // Звездный рейтинг
     $(".product-item__stars-box").starRating({
         initialRating: 4,
@@ -71,10 +72,21 @@ $(function () {
 
     // const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
     // таймер на 15 часов, будет перезапускатся при перезагрузке страницы
-   
     // const deadline = '2025-12-31';
     // таймер на определенное время, перезапускаться не будет
-    const deadline = $('#sale-timer').attr('data-timeout');
-    initializeClock('sale-timer', deadline);
+    const deadline = $("#sale-timer").attr("data-timeout");
+    initializeClock("sale-timer", deadline);
+
+    // RangeSlider
+    // При вызове этого плагина в файле main.js, если его ставить первым, то перестают работать другие плагины,
+    // а если его поставить последним, то он не работает. Поэтому поставил его напрямую в html
+    // $(".js-range-slider").ionRangeSlider({
+    //     type: "double",
+    //     min: 0,
+    //     max: 1000,
+    //     from: 200,
+    //     to: 500,
+    //     grid: true
+    // });
 
 });

@@ -709,6 +709,30 @@
     <script src="js/slick.min.js"></script>
     <script src="js/fancybox.umd.js"></script>
     <script src="js/jquery.star-rating-svg.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script>
+        $(function () {
+            $(".price-filter__input").ionRangeSlider({
+                type: "double",
+                step: 50,
+                // min: 0,
+                // max: 1000,
+                // from: 200,
+                // to: 500,
+                // прописываются в дата-атрибутах для доступа back-end
+                grid: false,
+                onStart: function (data) {
+                    // в span-ы выводим данные из полей data.from и data.to текущего объекта ionRangeSlider
+                    $(".price-filter__from").text(data.from);
+                    $(".price-filter__to").text(data.to);
+                },
+                onChange: function (data) {
+                    $(".price-filter__from").text(data.from);
+                    $(".price-filter__to").text(data.to);
+                }
+            });
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 

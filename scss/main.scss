@@ -786,6 +786,171 @@
     }
 }
 
+// catalog
+
+.catalog {
+    padding: 110px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__filters {
+        width: 370px;
+        // border: 1px dotted grey;
+    }
+    &__filters-item {
+        padding: 40px 30px;
+        border: 1px solid #ececec;
+        margin-bottom: 40px;
+    }
+    &__content {
+        width: 770px;
+        border: 1px dotted grey;
+    }
+}
+
+.search {
+    &__form {
+        display: flex;
+    }
+    &__input {
+        padding: 15px 20px;
+        background-color: $bg-gray;
+        border: none;
+        width: 260px;
+    }
+    .accent-btn {
+        padding: 15px 28px;
+        background-image: url(../img/icons/search-white.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 18px 18px;
+    }
+}
+
+// price-filter
+
+.price-filter {
+    &__input {
+        // margin-bottom: 30px;
+        // display: block;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+    }
+}
+
+// переопред. стилей ionRangeSlider
+
+.irs--flat .irs-line {
+    top: 12px;
+    height: 6px;
+    background-color: #ececec;
+    border-radius: 0px;
+}
+
+.irs--flat .irs-bar {
+    top: 12px;
+    height: 6px;
+    background-color: $accent-color;
+}
+
+.irs--flat .irs-handle {
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 13px 0px rgba(90, 90, 90, 0.2);
+    cursor: pointer;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    display: none;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-to {
+     display: none;
+}
+
+.irs--flat .irs-min, .irs--flat .irs-max {
+    display: none;
+}
+
+.irs--flat {
+    height: 30px;
+}
+
+// color-filter
+
+.color-filter {
+    &__item {
+        padding-bottom: 18px;
+        border-bottom: 1px solid #ebebeb;
+        margin-bottom: 18px;
+
+    }
+    &__item:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+    }
+    &__input {
+        &[type="checkbox"]:checked + .color-filter__fake-checkbox::before {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    }
+    &__fake-checkbox {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        &--blue {
+            background-color: #00aeef;
+        }
+        &--red {
+            background-color: #f52574;
+        }
+        &--green {
+            background-color: #24d4ac;
+        }
+        &--orange {
+            background-color: #ff7e00;
+        }
+        &--black {
+            background-color: #000000;
+        }
+        &--purple {
+            background-color: #923899;
+        }
+    }
+}
+
+// size-filter
+
+.size-filter {
+    &__item + .size-filter__item {
+        margin-top: 20px;
+    }
+}
 
 // footer
 

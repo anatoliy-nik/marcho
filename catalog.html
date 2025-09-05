@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Catalog</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/star-rating-svg.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -68,14 +72,14 @@
             <div class="top__wrapper-img" style="background-image: url(img/top-bg.jpg);">
                 <div class="container">
                     <div class="top__content">
-                        <h1 class="page-title">Log in</h1>
+                        <h1 class="page-title">Catalog</h1>
                         <div class="breadcrumbs">
                             <ul class="breadcrumbs__list">
                                 <li class="breadcrumbs__item">
                                     <a class="breadcrumbs__link" href="#">Home</a>
                                 </li>
                                 <li class="breadcrumbs__item">
-                                    <span>Log in</span>
+                                    <span>Catalog</span>
                                 </li>
                             </ul>
                         </div>
@@ -84,28 +88,114 @@
             </div>
         </section>
 
-        <section class="login">
+        <section class="catalog">
             <div class="container">
-                <div class="login__titles">
-                    <a class="login__titles-item" href="#">Register</a>
-                    <span class="login__titles-item" href="#">Login</span>
+                <div class="catalog__wrapper">
+                    <!-- catalog__filters -->
+                    <div class="catalog__filters">
+                        <!-- search -->
+                        <div class="search catalog__filters-item">
+                            <h3 class="filters-title">Search</h3>
+                            <form class="search__form" action="#">
+                                <input class="search__input" type="text" placeholder="Search your keyword....">
+                                <button class="accent-btn" type="button"></button>
+                            </form>
+                        </div>
+                        <!-- RangeSlider -->
+                        <div class="price-filter catalog__filters-item">
+                            <h3 class="filters-title">Price Filter</h3>
+                            <form class="price-filter__form" action="#">
+                                <input type="text" class="price-filter__input" data-min="50" data-max="1000"
+                                    data-from="200" data-to="500" />
+                                <div class="price-filter__info">
+                                    <div class="price-filter__numbers">
+                                        Price:
+                                        $<span class="price-filter__from"></span> -
+                                        $<span class="price-filter__to"></span>
+                                    </div>
+                                    <button class="accent-btn" type="submit">Filter</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- color-filter -->
+                        <div class="color-filter catalog__filters-item">
+                            <h3 class="filters-title">Color Filter</h3>
+                            <form  class="color-filter__form" action="#">
+                                <ul class="color-filter__list">
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Blue (15)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span class="color-filter__fake-checkbox color-filter__fake-checkbox--blue"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Red (09)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span class="color-filter__fake-checkbox color-filter__fake-checkbox--red"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Green (28)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span class="color-filter__fake-checkbox color-filter__fake-checkbox--green"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Orange (11)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span class="color-filter__fake-checkbox color-filter__fake-checkbox--orange"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Black (05)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span class="color-filter__fake-checkbox color-filter__fake-checkbox--black"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Purple (21)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span class="color-filter__fake-checkbox color-filter__fake-checkbox--purple"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <!-- size-filter -->
+                        <div class="size-filter catalog__filters-item">
+                            <h3 class="filters-title">Size Filter</h3>
+                            <form class="size-filter__form" action="#">
+                                <ul class="size-filter__list">
+                                    <li class="size-filter__item">
+                                        <label class="size-filter__label">
+                                            <input class="size-filter__input" type="checkbox">
+                                            <span class="size-filter__fake-checkbox"></span>
+                                            <span class="size-filter__size">X-small</span>
+                                        </label>
+                                    </li>
+                                    <li class="size-filter__item">
+                                        <label class="size-filter__label">
+                                            <input class="size-filter__input" type="checkbox">
+                                            <span class="size-filter__fake-checkbox"></span>
+                                            <span class="size-filter__size">Small</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+
+                    </div>
+                    <!-- catalog__content -->
+                    <div class="catalog__content">
+                        
+                    </div>
                 </div>
-                <form class="login-form" action="#">
-                    <label class="login-form__label">
-                        Username or email address*
-                        <input class="login-form__input" type="text" required>
-                    </label>
-                    <label class="login-form__label">
-                        Password*
-                        <input class="login-form__input" type="password" required>
-                    </label>
-                    <label class="login-form__label">
-                        <input type="checkbox">
-                        Remember me
-                    </label>
-                    <button class="dark-btn" type="submit">Login</button>
-                    <a class="login-form__forgot" href="#">Lost your password?</a>
-                </form>
             </div>
         </section>
     </main>
@@ -258,6 +348,33 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/jquery.star-rating-svg.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script>
+        $(function () {
+            $(".price-filter__input").ionRangeSlider({
+                type: "double",
+                step: 50,
+                // min: 0,
+                // max: 1000,
+                // from: 200,
+                // to: 500,
+                // прописываются в дата-атрибутах для доступа back-end
+                grid: false,
+                onStart: function (data) {
+                    // в span-ы выводим данные из полей data.from и data.to текущего объекта ionRangeSlider
+                    $(".price-filter__from").text(data.from);
+                    $(".price-filter__to").text(data.to);
+                },
+                onChange: function (data) {
+                    $(".price-filter__from").text(data.from);
+                    $(".price-filter__to").text(data.to);
+                }
+            });
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 

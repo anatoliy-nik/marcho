@@ -88,6 +88,16 @@ body {
     color: $default-dark-color;
 }
 
+.filters-title {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $default-dark-color;
+    margin-bottom: 30px;
+}
+
 .breadcrumbs {
     &__list {
         display: flex;
@@ -141,4 +151,16 @@ body {
 
 .header--page-404 {
     background-color: $bg-gray;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
