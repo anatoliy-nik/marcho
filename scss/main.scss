@@ -900,11 +900,11 @@
     &__label {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         cursor: pointer;
-        position: relative;
     }
     &__input {
-        &[type="checkbox"]:checked + .color-filter__fake-checkbox::before {
+        &[type="checkbox"]:checked + .color-filter__checkmark::before {
             content: "";
             position: absolute;
             left: 6px;
@@ -916,11 +916,8 @@
             transform: rotate(45deg);
         }
     }
-    &__fake-checkbox {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+    &__checkmark {
+        position: relative;
         width: 18px;
         height: 18px;
         &--blue {
@@ -954,7 +951,7 @@
         display: flex;
         align-items: center;
         cursor: pointer;
-        // &:hover .size-filter__fake-checkbox {
+        // &:hover .size-filter__checkmark {
         //     border: 1px solid $accent-color;
         // }
         // &:hover .size-filter__size {
@@ -962,7 +959,7 @@
         // }
     }
     &__input {
-        &[type="checkbox"]:checked + .size-filter__fake-checkbox {
+        &[type="checkbox"]:checked + .size-filter__checkmark {
             border: 1px solid $accent-color;
             &::before {
                 content: "";
@@ -981,7 +978,7 @@
         }
 
     }
-    &__fake-checkbox {
+    &__checkmark {
         width: 20px;
         height: 20px;
         border: 1px solid $default-light-color;
@@ -990,8 +987,56 @@
         position: relative;
         margin-right: 15px;
     }
-
 }
+
+// category-filter
+
+.category-filter {
+    &__item {
+        margin-bottom: 15px;
+    }
+    &__input {
+        &[type="checkbox"]:checked + .category-filter__checkmark {
+            background-color: $accent-color;
+            color: #fff;
+        }
+    }
+    &__checkmark {
+        background-color: $bg-gray;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #29282d;
+        cursor: pointer;
+    }
+}
+
+// popular-tags
+
+.popular-tags {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__item {
+        margin-bottom: 20px;
+    }
+    &__input[type="checkbox"]:checked + .popular-tags__tag {
+        border: 1px solid $accent-color;
+        background-color: $accent-color;
+        color: #fff;
+    }
+    &__tag {
+        padding: 12px 20px;
+        border: 1px solid $default-light-color;
+        background-color: #fff;
+        display: block;
+        cursor: pointer;
+    }
+}
+
 
 // footer
 
