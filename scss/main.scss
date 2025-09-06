@@ -950,6 +950,47 @@
     &__item + .size-filter__item {
         margin-top: 20px;
     }
+    &__label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        // &:hover .size-filter__fake-checkbox {
+        //     border: 1px solid $accent-color;
+        // }
+        // &:hover .size-filter__size {
+        //     color: $accent-color;
+        // }
+    }
+    &__input {
+        &[type="checkbox"]:checked + .size-filter__fake-checkbox {
+            border: 1px solid $accent-color;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 6px;
+                top: 3px;
+                width: 5px;
+                height: 9px;
+                border: solid $accent-color;
+                border-width: 0 1px 1px 0;
+                transform: rotate(45deg);
+            }
+            & + .size-filter__size {
+                color: $accent-color;
+            }
+        }
+
+    }
+    &__fake-checkbox {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $default-light-color;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 15px;
+    }
+
 }
 
 // footer
