@@ -20,7 +20,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    // border: 1px dotted #ccc;
+    border: 1px dotted #ccc;
 }
 
 .accent-btn {
@@ -53,6 +53,25 @@ body {
     display: inline-block;
 }
 
+.dark-btn {
+    border: none;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    background-color: $default-dark-color;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.dark-btn:hover {
+    background-color: $accent-color;
+}
+
 .section-title {
     font-family: 'Roboto-Bold', sans-serif;
     font-weight: 700;
@@ -62,4 +81,91 @@ body {
     line-height: 26px;
     margin-bottom: 28px;
     text-align: center;
+}
+
+.page-title {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: $default-dark-color;
+}
+
+.filters-title {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $default-dark-color;
+    margin-bottom: 30px;
+}
+
+.breadcrumbs {
+    &__list {
+        display: flex;
+        align-items: center;
+        // padding-left: 10px;
+        position: relative;
+        // border: 1px solid red;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            background-image: url(../img/icons/home-icon.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 16px;
+            color: $accent-color;
+        }
+    }
+    &__item {
+        // margin: 0 15px;
+        position: relative;
+        padding-left: 26px;
+        &:last-child {
+            color: $default-lighter-color;
+        }
+    }
+    &__item + .breadcrumbs__item {
+        margin-left: 15px
+    }
+    &__item + .breadcrumbs__item::before {
+        position: absolute;
+        content: '';
+        width: 12px;
+        height: 12px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url(../img/icons/angle-right.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 10px;
+    }
+    &__link {
+        color: $accent-color;
+    }
+}
+
+.header--page-404 {
+    background-color: $bg-gray;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

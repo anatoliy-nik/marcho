@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcho</title>
+    <title>Catalog</title>
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/fancybox.css">
     <link rel="stylesheet" href="css/star-rating-svg.css">
@@ -70,155 +70,301 @@
     </header>
 
     <main class="main">
-        <section class="top-slider">
-            <div class="top-slider__wrapper">
-                <div class="top-slider__item">
-                    <div class="top-slider__container">
-                        <div class="top-slider__inner">
-                            <div class="top-slider__content">
-                                <h3 class="top-slider__title">
-                                    New Season <br> Brand Collection 1
-                                </h3>
-                                <p class="top-slider__text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    et dolore magna aliqua. Ipsum.
-                                </p>
-                                <a class="top-slider__btn accent-btn" href="#">Buy now</a>
-                            </div>
-                            <img class="top-slider__img" src="img/slider/photo1.png" alt="slide 1">
-                        </div>
-                    </div>
-                </div>
-                <div class="top-slider__item">
-                    <div class="top-slider__container">
-                        <div class="top-slider__inner">
-                            <div class="top-slider__content">
-                                <h3 class="top-slider__title">
-                                    New Season <br> Brand Collection 2
-                                </h3>
-                                <p class="top-slider__text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    et dolore magna aliqua. Ipsum.
-                                </p>
-                                <a class="top-slider__btn accent-btn" href="#">Buy now</a>
-                            </div>
-                            <img class="top-slider__img" src="img/slider/photo1.png" alt="slide 2">
-                        </div>
-                    </div>
-                </div>
-                <div class="top-slider__item">
-                    <div class="top-slider__container">
-                        <div class="top-slider__inner">
-                            <div class="top-slider__content">
-                                <h3 class="top-slider__title">
-                                    New Season <br> Brand Collection 3
-                                </h3>
-                                <p class="top-slider__text">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    et dolore magna aliqua. Ipsum.
-                                </p>
-                                <a class="top-slider__btn accent-btn" href="#">Buy now</a>
-                            </div>
-                            <img class="top-slider__img" src="img/slider/photo1.png" alt="slide 3">
+        <section class="top">
+            <div class="top__wrapper-img" style="background-image: url(img/top-bg.jpg);">
+                <div class="container">
+                    <div class="top__content">
+                        <h1 class="page-title">Catalog</h1>
+                        <div class="breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="#">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span>Catalog</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="info">
+        <section class="catalog">
             <div class="container">
-                <div class="advantages">
-                    <ul class="advantages__list">
-                        <li class="advantages__item">
-                            <div class="advantages__img"></div>
-                            <h4 class="advantages__title">Free Shipping Order $100</h4>
-                            <p class="advantages__text">
-                                Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do
-                            </p>
-                        </li>
-                        <li class="advantages__item">
-                            <div class="advantages__img"></div>
-                            <h4 class="advantages__title">30 Days Easy Return</h4>
-                            <p class="advantages__text">
-                                Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do
-                            </p>
-                        </li>
-                        <li class="advantages__item">
-                            <div class="advantages__img"></div>
-                            <h4 class="advantages__title">24/7 Customer Support</h4>
-                            <p class="advantages__text">
-                                Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="top-categories">
-                    <h2 class="section-title">Top categories</h2>
-                    <p class="top-categories__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                        adipisci praesentium ipsa, nisi explicabo illo!
-                    </p>
-                    <div class="top-categories__list">
-                        <div class="top-categories__item" style="background-image: url(img/top-categories/cat1.jpg);">
-                            <p class="top-categories__item-accent">Up to 40% off</p>
-                            <h3 class="top-categories__item-title">Shoes&Jawellry</h3>
-                            <a class="top-categories__item-link" href="#">Explore more</a>
+                <div class="catalog__wrapper">
+                    <!-- catalog__filters -->
+                    <div class="catalog__filters">
+                        <!-- search -->
+                        <div class="search catalog__filters-item">
+                            <h3 class="filters-title">Search</h3>
+                            <form class="search__form" action="#">
+                                <input class="search__input" type="text" placeholder="Search your keyword....">
+                                <button class="accent-btn" type="button"></button>
+                            </form>
                         </div>
-                        <div class="top-categories__item" style="background-image: url(img/top-categories/cat2.jpg);">
-                            <p class="top-categories__item-accent">New Arrival</p>
-                            <h3 class="top-categories__item-title">Clothes & Accessories</h3>
-                            <a class="top-categories__item-link" href="#">Explore more</a>
+                        <!-- RangeSlider -->
+                        <div class="price-filter catalog__filters-item">
+                            <h3 class="filters-title">Price Filter</h3>
+                            <form class="price-filter__form" action="#">
+                                <input type="text" class="price-filter__input" data-min="50" data-max="1000"
+                                    data-from="200" data-to="500" />
+                                <div class="price-filter__info">
+                                    <div class="price-filter__numbers">
+                                        Price:
+                                        $<span class="price-filter__from"></span> -
+                                        $<span class="price-filter__to"></span>
+                                    </div>
+                                    <button class="accent-btn" type="submit">Filter</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="top-categories__item" style="background-image: url(img/top-categories/cat3.jpg);">
-                            <p class="top-categories__item-accent">Trending Now</p>
-                            <h3 class="top-categories__item-title">Men’s Fashion</h3>
-                            <a class="top-categories__item-link" href="#">Explore more</a>
+                        <!-- color-filter -->
+                        <div class="color-filter catalog__filters-item">
+                            <h3 class="filters-title">Color Filter</h3>
+                            <form class="color-filter__form" action="#">
+                                <ul class="color-filter__list">
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Blue (15)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox" checked>
+                                            <span class="color-filter__checkmark color-filter__checkmark--blue"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Red (09)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span class="color-filter__checkmark color-filter__checkmark--red"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Green (28)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span class="color-filter__checkmark color-filter__checkmark--green"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Orange (11)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span
+                                                class="color-filter__checkmark color-filter__checkmark--orange"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Black (05)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span class="color-filter__checkmark color-filter__checkmark--black"></span>
+                                        </label>
+                                    </li>
+                                    <li class="color-filter__item">
+                                        <label class="color-filter__label">
+                                            <span class="color-filter__color">Purple (21)</span>
+                                            <input class="color-filter__input visually-hidden" type="checkbox">
+                                            <span
+                                                class="color-filter__checkmark color-filter__checkmark--purple"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
                         </div>
-                        <div class="top-categories__item" style="background-image: url(img/top-categories/cat4.jpg);">
-                            <p class="top-categories__item-accent">Hot Collection</p>
-                            <h3 class="top-categories__item-title">Girl’s Fashion</h3>
-                            <a class="top-categories__item-link" href="#">Explore more</a>
+                        <!-- size-filter -->
+                        <div class="size-filter catalog__filters-item">
+                            <h3 class="filters-title">Size Filter</h3>
+                            <form class="size-filter__form" action="#">
+                                <ul class="size-filter__list">
+                                    <li class="size-filter__item">
+                                        <label class="size-filter__label">
+                                            <input class="size-filter__input visually-hidden" type="checkbox" checked>
+                                            <span class="size-filter__checkmark"></span>
+                                            <span class="size-filter__size">X-small</span>
+                                        </label>
+                                    </li>
+                                    <li class="size-filter__item">
+                                        <label class="size-filter__label">
+                                            <input class="size-filter__input visually-hidden" type="checkbox">
+                                            <span class="size-filter__checkmark"></span>
+                                            <span class="size-filter__size">Small</span>
+                                        </label>
+                                    </li>
+                                    <li class="size-filter__item">
+                                        <label class="size-filter__label">
+                                            <input class="size-filter__input visually-hidden" type="checkbox">
+                                            <span class="size-filter__checkmark"></span>
+                                            <span class="size-filter__size">Medium</span>
+                                        </label>
+                                    </li>
+                                    <li class="size-filter__item">
+                                        <label class="size-filter__label">
+                                            <input class="size-filter__input visually-hidden" type="checkbox">
+                                            <span class="size-filter__checkmark"></span>
+                                            <span class="size-filter__size">Large</span>
+                                        </label>
+                                    </li>
+                                    <li class="size-filter__item">
+                                        <label class="size-filter__label">
+                                            <input class="size-filter__input visually-hidden" type="checkbox">
+                                            <span class="size-filter__checkmark"></span>
+                                            <span class="size-filter__size">XXL</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <!-- category-filter -->
+                        <div class="category-filter catalog__filters-item">
+                            <h3 class="filters-title">Category</h3>
+                            <form class="category-filter__form" action="#">
+                                <ul class="category-filter__list">
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox"
+                                                checked>
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Woman</span>
+                                                <span class="category-filter__number">48</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Man</span>
+                                                <span class="category-filter__number">30</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Fashion</span>
+                                                <span class="category-filter__number">121</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Hot Dresses</span>
+                                                <span class="category-filter__number">22</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Accessories</span>
+                                                <span class="category-filter__number">88</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Sale Products</span>
+                                                <span class="category-filter__number">92</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <!-- popular-tags -->
+                        <div class="popular-tags catalog__filters-item">
+                            <h3 class="filters-title">Papular tags</h3>
+                            <form class="popular-tags__form" action="#">
+                                <ul class="popular-tags__list">
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox" checked>
+                                            <span class="popular-tags__tag">Sweetshirt</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">Man Accessories</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">Fashion</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">Polo</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">T-Shirt</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">Jewellery</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="video">
-            <div class="container">
-                <div class="video__wrapper">
-                    <div class="video__box" style="background-image: url('img/video-preview.jpg');">
-                        <a class="video__link" href="https://www.youtube.com/watch?v=PUdyuKaGQd4" data-fancybox>
-                            <img class="video__link-img" src="img/icons/play-btn.svg" alt="video play">
-                        </a>
-                    </div>
-                    <div class="video__descr">
-                        <div class="video__descr-accent">Winter Collection 20% Off</div>
-                        <h3 class="section-title">Trending Fashion</h3>
-                        <div class="video__descr-text">
-                            Lorem ipsum dolor sit amet, consectetur apiscing elit, sed do eiusmod temp incididunt ut
-                            labore
-                            et dolore magna aliqua consectetur adipiscing elit, sedu do eiusmod temp indidunt ut labore
-                            et
-                            dolore magna aliqua.. Quis ipsum de ultcesm. Risus commodo viverra maecenas.
+                    <!-- catalog__content -->
+                    <div class="catalog__content">
+                        <!-- sort -->
+                        <div class="catalog-sort">
+                            <!-- view -->
+                            <div class="catalog-sort__view">
+                                <span>View</span>
+                                <button class="catalog-sort__btn catalog-sort__btn--active" id="catalog-btn-grid">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="15px" height="15px">
+                                        <path fill-rule="evenodd" fill="#8d8d8d"
+                                            d="M-0.000,3.750 L3.750,3.750 L3.750,-0.000 L-0.000,-0.000 L-0.000,3.750 ZM5.625,15.000 L9.375,15.000 L9.375,11.250 L5.625,11.250 L5.625,15.000 ZM-0.000,15.000 L3.750,15.000 L3.750,11.250 L-0.000,11.250 L-0.000,15.000 ZM-0.000,9.375 L3.750,9.375 L3.750,5.625 L-0.000,5.625 L-0.000,9.375 ZM5.625,9.375 L9.375,9.375 L9.375,5.625 L5.625,5.625 L5.625,9.375 ZM11.250,-0.000 L11.250,3.750 L15.000,3.750 L15.000,-0.000 L11.250,-0.000 ZM5.625,3.750 L9.375,3.750 L9.375,-0.000 L5.625,-0.000 L5.625,3.750 ZM11.250,9.375 L15.000,9.375 L15.000,5.625 L11.250,5.625 L11.250,9.375 ZM11.250,15.000 L15.000,15.000 L15.000,11.250 L11.250,11.250 L11.250,15.000 Z" />
+                                    </svg>
+                                </button>
+                                <button class="catalog-sort__btn" id="catalog-btn-list">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        width="20px" height="15px">
+                                        <path fill-rule="evenodd" fill="#8d8d8d"
+                                            d="M5.835,14.998 L5.835,10.827 L19.994,10.827 L19.994,14.998 L5.835,14.998 ZM5.835,5.413 L19.994,5.413 L19.994,9.585 L5.835,9.585 L5.835,5.413 ZM5.835,0.000 L19.994,0.000 L19.994,4.172 L5.835,4.172 L5.835,0.000 ZM0.007,10.827 L4.429,10.827 L4.429,14.998 L0.007,14.998 L0.007,10.827 ZM0.007,5.413 L4.429,5.413 L4.429,9.585 L0.007,9.585 L0.007,5.413 ZM0.007,0.000 L4.429,0.000 L4.429,4.172 L0.007,4.172 L0.007,0.000 Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <!-- selects -->
+                            <div class="catalog-sort__selects">
+                                <form class="catalog-sort__form" action="#">
+                                    <select class="catalog-sort__select-sort select-style">
+                                        <option value="">Sort By Default</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select>
+                                    <select class="catalog-sort__select-view select-style">
+                                        <option value="">Show 9</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select>
+                                </form>
+                            </div>
                         </div>
-                        <button class="accent-btn" type="button">View Now</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="trending-product">
-            <div class="container">
-                <h2 class="section-title">Trending product</h2>
-                <p class="trending-product__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodmoe tempor incididunt ut
-                    labore et dolore aliqua.
-                </p>
-                <!-- product-box -->
-                <div class="product-box">
-                    <div class="product-item">
+                        <!-- catalog-box -->
+                        <div class="catalog-box">
+                            <div class="product-item">
                                 <div class="product-item__img-box">
                                     <img class="product-item__img" src="img/product/test-img.jpg" alt="product">
                                     <div class="product-item__link-box">
@@ -473,128 +619,6 @@
                                     <button class="dark-btn" type="button">Add to cart</button>
                                 </div>
                             </div>
-                        </div>
-                </div>
-                <a class="default-btn" href="#">Load more</a>
-            </div>
-        </section>
-
-        <div class="sale">
-            <div class="container">
-                <div class="sale__content">
-                    <span class="sale__accent">Style Fashion</span>
-                    <h2 class="section-title">Deal of the day</h2>
-                    <div class="sale-timer" id="sale-timer" data-timeout="'2025-12-31'">
-                        <div class="sale-timer__item">
-                            <div class="sale-timer__item-content"></div>
-                            <span class="sale-timer__days"></span>
-                            <div class="sale-timer__desc">Days</div>
-                        </div>
-                        <div class="sale-timer__item">
-                            <span class="sale-timer__hours"></span>
-                            <div class="sale-timer__desc">Hours</div>
-                        </div>
-                        <div class="sale-timer__item">
-                            <span class="sale-timer__minutes"></span>
-                            <div class="sale-timer__desc">Minutes</div>
-                        </div>
-                        <div class="sale-timer__item">
-                            <span class="sale-timer__seconds"></span>
-                            <div class="sale-timer__desc">Seconds</div>
-                        </div>
-                    </div>
-                    <a class="default-btn" href="#">Shop now</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="brands">
-            <div class="container">
-                <ul class="brands__list">
-                    <li class="brands__item">
-                        <a class="brands__link" href="#">
-                            <img class="brands__link-img" src="img/brands/brand-1.png" alt="brand">
-                        </a>
-                    </li>
-                    <li class="brands__item">
-                        <a class="brands__link" href="#">
-                            <img class="brands__link-img" src="img/brands/brand-2.png" alt="brand">
-                        </a>
-                    </li>
-                    <li class="brands__item">
-                        <a class="brands__link" href="#">
-                            <img class="brands__link-img" src="img/brands/brand-3.png" alt="brand">
-                        </a>
-                    </li>
-                    <li class="brands__item">
-                        <a class="brands__link" href="#">
-                            <img class="brands__link-img" src="img/brands/brand-4.png" alt="brand">
-                        </a>
-                    </li>
-                    <li class="brands__item">
-                        <a class="brands__link" href="#">
-                            <img class="brands__link-img" src="img/brands/brand-5.png" alt="brand">
-                        </a>
-                    </li>
-                    <li class="brands__item">
-                        <a class="brands__link" href="#">
-                            <img class="brands__link-img" src="img/brands/brand-6.png" alt="brand">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <section class="blog">
-            <div class="container">
-                <h2 class="section-title">From Our Blog</h2>
-                <p class="blog__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodmoe tempor
-                    incididunt ut labore et dolore aliqua.</p>
-                <!-- blog-box -->
-                <div class="blog-box">
-                    <div class="blog-box__item">
-                        <a class="blog-box__img-link" href="#">
-                            <img src="img/blog/foto-1.jpg" alt="blog img">
-                        </a>
-                        <div class="blog-box__item-content">
-                            <div class="blog-box__info">
-                                <a class="blog-box__author-link" href="#">By Admin</a>
-                                <span class="blog-box__date">10 January, 2020</span>
-                            </div>
-                            <a class="blog-box__title-link" href="#">
-                                <h4 class="blog-box__title">Our Apps User Use Mobile On His Mobile</h4>
-                            </a>
-                            <a class="blog-box__link" href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-box__item">
-                        <a class="blog-box__img-link" href="#">
-                            <img src="img/blog/foto-2.jpg" alt="blog img">
-                        </a>
-                        <div class="blog-box__item-content">
-                            <div class="blog-box__info">
-                                <a class="blog-box__author-link" href="#">By Admin</a>
-                                <span class="blog-box__date">10 January, 2020</span>
-                            </div>
-                            <a class="blog-box__title-link" href="#">
-                                <h4 class="blog-box__title">Our Apps User Use Mobile On His Mobile</h4>
-                            </a>
-                            <a class="blog-box__link" href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-box__item">
-                        <a class="blog-box__img-link" href="#">
-                            <img src="img/blog/foto-3.jpg" alt="blog img">
-                        </a>
-                        <div class="blog-box__item-content">
-                            <div class="blog-box__info">
-                                <a class="blog-box__author-link" href="#">By Admin</a>
-                                <span class="blog-box__date">10 January, 2020</span>
-                            </div>
-                            <a class="blog-box__title-link" href="#">
-                                <h4 class="blog-box__title">Our Apps User Use Mobile On His Mobile</h4>
-                            </a>
-                            <a class="blog-box__link" href="#">Read More</a>
                         </div>
                     </div>
                 </div>
