@@ -1,5 +1,24 @@
 $(function () {
 
+    // Переключение кнопок отображения каталога (Только визуальное оформление кнопок)
+    $(".catalog-sort__btn").on("click", function() {
+        // сначала всем кнопкам удалить .active
+        $(".catalog-sort__btn").removeClass("catalog-sort__btn--active");
+        // та кнопка, по которой кликнули, добавить .active 
+        $(this).addClass("catalog-sort__btn--active");
+    });
+
+    // При клике на #catalog-btn-list каталогу добавить .catalog-box--list
+    // Внеш. вид карточек товара будет меняться через новый класс родителя
+    $("#catalog-btn-list").on("click", function() {
+        $(".catalog-box").addClass("catalog-box--list");
+    });
+
+    // При клике на #catalog-btn-grid у каталога удалить .catalog-box--list
+    $("#catalog-btn-grid").on("click", function() {
+        $(".catalog-box").removeClass("catalog-box--list");
+    });
+
     // SlickSlider
     $(".top-slider__wrapper").slick({
         dots: true,
@@ -12,7 +31,6 @@ $(function () {
         // Your custom options
     });
 
-   
     // Звездный рейтинг
     $(".product-item__stars-box").starRating({
         initialRating: 4,
@@ -29,7 +47,32 @@ $(function () {
         }
     });
 
-    // Таймер
+    // RangeSlider
+    $(".price-filter__input").ionRangeSlider({
+        type: "double",
+        step: 50,
+        // min: 0,
+        // max: 1000,
+        // from: 200,
+        // to: 500,
+        // прописываются в дата-атрибутах для доступа back-end
+        grid: false,
+        onStart: function (data) {
+            // в span-ы выводим данные из полей data.from и data.to текущего объекта ionRangeSlider
+            $(".price-filter__from").text(data.from);
+            $(".price-filter__to").text(data.to);
+        },
+        onChange: function (data) {
+            $(".price-filter__from").text(data.from);
+            $(".price-filter__to").text(data.to);
+        }
+    });
+
+    // jQuery Form Styler 
+    $(".select-style").styler();
+
+
+    // Таймер. НУЖНО СТАВИТЬ ПОСЛЕДНИМ!. Т.к. плагины, идущие после него, не работают
     function getTimeRemaining(endtime) {
         const total = Date.parse(endtime) - Date.parse(new Date());
         const seconds = Math.floor((total / 1000) % 60);
@@ -73,20 +116,8 @@ $(function () {
     // const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
     // таймер на 15 часов, будет перезапускатся при перезагрузке страницы
     // const deadline = '2025-12-31';
-    // таймер на определенное время, перезапускаться не будет
+    // таймер на опр. время, перезапускаться не будет (значение прописано в html в data-атрибуте)
     const deadline = $("#sale-timer").attr("data-timeout");
     initializeClock("sale-timer", deadline);
-
-    // RangeSlider
-    // При вызове этого плагина в файле main.js, если его ставить первым, то перестают работать другие плагины,
-    // а если его поставить последним, то он не работает. Поэтому поставил его напрямую в html
-    // $(".js-range-slider").ionRangeSlider({
-    //     type: "double",
-    //     min: 0,
-    //     max: 1000,
-    //     from: 200,
-    //     to: 500,
-    //     grid: true
-    // });
 
 });

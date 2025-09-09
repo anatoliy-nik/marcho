@@ -65,6 +65,11 @@ body {
     text-transform: uppercase;
     cursor: pointer;
     display: inline-block;
+    transition: all .3s;
+}
+
+.dark-btn:hover {
+    background-color: $accent-color;
 }
 
 .section-title {
