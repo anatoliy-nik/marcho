@@ -78,6 +78,14 @@ body {
           flex-direction: column;
 }
 
+a {
+  font-size: 16px;
+  color: #8d8d8d;
+  line-height: 26px;
+  font-family: "Quicksand-Medium", sans-serif;
+  font-weight: 500;
+}
+
 .main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -238,6 +246,48 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.pagination {
+  padding: 40px 0;
+  text-transform: uppercase;
+}
+.pagination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pagination__item {
+  margin: 0 15px;
+}
+.pagination__link {
+  position: relative;
+}
+.pagination__link:hover {
+  color: #fe3e57;
+}
+.pagination__link:hover path {
+  fill: #fe3e57;
+}
+.pagination__link--active {
+  color: #fe3e57;
+}
+.pagination__link--prev, .pagination__link--next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .logo-link {
@@ -660,7 +710,7 @@ body {
 }
 
 .product-item {
-  max-width: 370px;
+  width: 100%;
 }
 .product-item__img-box {
   position: relative;
@@ -1417,12 +1467,13 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
-  row-gap: 40px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border-bottom: 1px solid #ececec;
+}
+.catalog-box .product-item {
+  width: calc(50% - 15px);
+  margin-bottom: 40px;
 }
 .catalog-box.catalog-box--list {
   display: block;
@@ -1433,12 +1484,15 @@ body {
 }
 
 .catalog-box--list .product-item {
-  max-width: 770px;
+  width: 100%;
   border: 1px solid #ececec;
   margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.catalog-box--list .product-item:last-child {
+  margin-bottom: 0;
 }
 .catalog-box--list .product-item:hover .product-item__link-box {
   top: 50%;
@@ -1489,7 +1543,7 @@ body {
   display: none;
 }
 .catalog-box--list .product-item__content-box {
-  max-width: 530px;
+  width: calc(100% - 230px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
