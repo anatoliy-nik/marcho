@@ -1,7 +1,28 @@
 $(function () {
 
+    // Слайдер фото в товаре
+    // отображение (крупные картинки)
+    $('.slider-for').slick({
+        draggable: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        asNavFor: '.slider-nav',
+        arrows: false
+        
+    });
+    // навигация (мелкие картинки)
+    $('.slider-nav').slick({
+        draggable: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        vertical: true,
+        focusOnSelect: true
+    });
+
     // Переключение кнопок отображения каталога (Только визуальное оформление кнопок)
-    $(".catalog-sort__btn").on("click", function() {
+    $(".catalog-sort__btn").on("click", function () {
         // сначала всем кнопкам удалить .active
         $(".catalog-sort__btn").removeClass("catalog-sort__btn--active");
         // та кнопка, по которой кликнули, добавить .active 
@@ -10,12 +31,12 @@ $(function () {
 
     // При клике на #catalog-btn-list каталогу добавить .catalog-box--list
     // Внеш. вид карточек товара будет меняться через новый класс родителя
-    $("#catalog-btn-list").on("click", function() {
+    $("#catalog-btn-list").on("click", function () {
         $(".catalog-box").addClass("catalog-box--list");
     });
 
     // При клике на #catalog-btn-grid у каталога удалить .catalog-box--list
-    $("#catalog-btn-grid").on("click", function() {
+    $("#catalog-btn-grid").on("click", function () {
         $(".catalog-box").removeClass("catalog-box--list");
     });
 
@@ -69,7 +90,7 @@ $(function () {
     });
 
     // jQuery Form Styler 
-    $(".select-style").styler();
+    $(".select-style, .single-product-basic__sum-input").styler();
 
 
     // Таймер. НУЖНО СТАВИТЬ ПОСЛЕДНИМ!. Т.к. плагины, идущие после него, не работают

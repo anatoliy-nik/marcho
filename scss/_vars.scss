@@ -5,6 +5,15 @@ $default-lighter-color:#ccccce;
 $default-dark-color: #29282d;
 $bg-gray: #f6f6f6;
 
-// наследование наборов свойств css
+$filter-pink: #f49ac1;
+$filter-grey: #ccccce;
+$filter-orange: #ffbc41;
+$filter-violett: #b370ff;
+$filter-green: #6fdf9e;
+$filter-red: #ff6060;
+$filter-blue: #00aeef;
+$filter-black: #000;
+
+// есть еще наследование целых наборов свойств css
 // название определяется через %
 // подключается через @extend
