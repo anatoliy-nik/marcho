@@ -1,5 +1,24 @@
 $(function () {
 
+    // переключение табов в товаре
+    $('.single-product-tabs__titles-item').on('click', function(e){
+        // отменяет поведение браузера при клике на ссылку, т.е. отменяет переход
+        e.preventDefault();
+        // у всех ссылок убрать класс --active
+        $('.single-product-tabs__titles-item').removeClass('single-product-tabs__titles-item--active');
+        // а той ссылке, по которой клинкнули - добавить
+        $(this).addClass('single-product-tabs__titles-item--active');
+
+        // здесь сделано через display:none у табов, что не есть хорошо
+        // $('.single-product-tabs__content-item').removeClass('single-product-tabs__content-item--active');
+        // $($(this).attr('href')).addClass('single-product-tabs__content-item--active');
+
+        // всем табам добавить класс visually-hidden
+        $('.single-product-tabs__content-item').addClass('visually-hidden');
+        // у той ссылки, по которой кликнули, взять значение атрибута href и у элемента с таким id удалить класс visually-hidden
+        $($(this).attr('href')).removeClass('visually-hidden');
+    });
+
     // Слайдер фото в товаре
     // отображение (крупные картинки)
     $('.slider-for').slick({
@@ -54,14 +73,29 @@ $(function () {
 
     // Звездный рейтинг
     $(".product-item__stars-box").starRating({
-        initialRating: 4,
+        // initialRating: 4,
         emptyColor: '#ccccce',
         hoverColor: '#ffc35b',
         activeColor: '#ffc35b',
         useGradient: false,
         strokeWidth: 0,
         starSize: 20,
-        minRating: 1,
+        // minRating: 1,
+        readOnly: true,
+        callback: function (currentRating, $el) {
+            // make a server call here
+        }
+    });
+
+    $(".comments__item-stars-box").starRating({
+        // initialRating: 4,
+        emptyColor: '#ccccce',
+        hoverColor: '#ffc35b',
+        activeColor: '#ffc35b',
+        useGradient: false,
+        strokeWidth: 0,
+        starSize: 20,
+        // minRating: 1,
         readOnly: true,
         callback: function (currentRating, $el) {
             // make a server call here
