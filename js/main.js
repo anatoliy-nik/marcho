@@ -1,7 +1,7 @@
 $(function () {
 
     // переключение табов в товаре
-    $('.single-product-tabs__titles-item').on('click', function(e){
+    $('.single-product-tabs__titles-item').on('click', function (e) {
         // отменяет поведение браузера при клике на ссылку, т.е. отменяет переход
         e.preventDefault();
         // у всех ссылок убрать класс --active
@@ -28,7 +28,7 @@ $(function () {
         fade: true,
         asNavFor: '.slider-nav',
         arrows: false
-        
+
     });
     // навигация (мелкие картинки)
     $('.slider-nav').slick({
@@ -80,8 +80,9 @@ $(function () {
         useGradient: false,
         strokeWidth: 0,
         starSize: 20,
-        // minRating: 1,
+        minRating: 1,
         readOnly: true,
+        starShape:'rounded',
         callback: function (currentRating, $el) {
             // make a server call here
         }
@@ -95,8 +96,9 @@ $(function () {
         useGradient: false,
         strokeWidth: 0,
         starSize: 20,
-        // minRating: 1,
+        minRating: 1,
         readOnly: true,
+        starShape:'rounded',
         callback: function (currentRating, $el) {
             // make a server call here
         }
