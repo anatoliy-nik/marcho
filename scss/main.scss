@@ -1681,7 +1681,7 @@
     &__content {
         padding: 40px;
     }
-    &__img-link {
+    &__img-link, .blog-page-item__img-slider, .blog-page-item__img-popup {
         img {
             object-fit: cover;
             width: 770px;
@@ -1696,25 +1696,174 @@
         color: $default-dark-color;
         display: block;
         margin-bottom: 30px;
+        transition: all .3s;
+    }
+    &__title-link:hover {
+        color: $accent-color;
     }
     &__info.blog-box__info {
         justify-content: start;
         column-gap: 30px;
     }
-}
-
-.blog-page-aside {
-    flex: 1;
-    border: 1px dotted #5800e4;
+    &__img-slider {
+        width: 770px;
+        // height: 450px;
+    }
+    &--slider {
+        .slick-arrow {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            cursor: pointer;
+            background-color: $accent-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 7px 20px 0px rgba(254, 62, 87, 0.3);
+        }
+        .slick-next {
+            right: 40px;
+        }
+        .slick-prev {
+            left: 40px;
+        }
+        svg {
+            fill: #fff;
+        }
+        .slick-disabled {
+            background-color: #fff;
+            cursor: auto;
+            svg {
+                fill: $default-light-color;
+            }
+        }
+    }
+    &__img-popup {
+        position: relative;
+    }
+    &__link-popup {
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        border-radius: 50px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        svg {
+            width: 24px;
+            fill: $accent-color;
+        }
+    }
 }
 
 // blog-page-aside
 
 .blog-page-aside {
+    flex: 1;
+    border: 1px dotted #5800e4;
     &__item {
         padding: 40px 30px;
         border: 1px solid #ececec;
         margin-bottom: 40px;
+    }
+}
+
+// person-box
+
+.person-box {
+    text-align: center;
+}
+
+.person {
+    &__img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    &__name {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        color: $default-dark-color;
+    }
+    &__position {
+        color: $accent-color;
+        margin-bottom: 25px;
+        display: block;
+    }
+    &__about {
+        margin-bottom: 25px;
+    }
+    .social-list {
+        justify-content: center;
+    }
+}
+
+// latest-post
+
+.latest-post {
+    &__item {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ececec;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 40px);
+        grid-column-gap: 20px;
+        align-items: end;
+        // justify-items — выравнивание по горизонтали.
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border: none;
+        }
+    }
+    &__link-img {
+        grid-row: span 2;
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+    }
+    &__link-title {
+        font-family: 'Roboto-Regular', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: $default-dark-color;
+        grid-column: span 2;
+    }
+    &__date {
+        position:relative;
+        padding-left: 30px;
+        grid-column: span 2;
+        height: 26px;
+    }
+    &__date::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url(../img/icons/calendar.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 16px 16px;
     }
 }
 
