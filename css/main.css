@@ -1948,6 +1948,143 @@ a {
   background-size: 16px 16px;
 }
 
+.post-content {
+  border: 1px solid #ececec;
+  padding: 30px;
+}
+.post-content__img-box {
+  margin: -30px -30px 30px -30px;
+}
+.post-content__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.post-content__info-item {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.post-content__info-item svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+.post-content__info-item path {
+  fill: #fe3e57;
+}
+.post-content__item-link:hover {
+  color: #fe3e57;
+}
+.post-content__title {
+  font-family: "Roboto-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 25px;
+  color: #29282d;
+}
+.post-content p {
+  margin-bottom: 20px;
+}
+.post-content blockquote {
+  background-color: #f6f6f6;
+  padding: 38px;
+  border-left: 2px solid #fe3e57;
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #29282d;
+  margin-bottom: 20px;
+}
+.post-content .img-float-left {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.tags-share {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+}
+.tags span {
+  margin-right: 10px;
+  text-transform: uppercase;
+  color: #29282d;
+}
+.tags__list {
+  display: flex;
+}
+.tags__item {
+  margin-right: 10px;
+}
+.tags__link:hover {
+  color: #fe3e57;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+}
+.share span {
+  margin-right: 10px;
+  text-transform: uppercase;
+  color: #29282d;
+}
+
+.post-author {
+  display: grid;
+  grid-template-columns: 140px auto;
+  grid-column-gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.post-author__img-link {
+  grid-row: span 2;
+}
+.post-author__name-link h6 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #29282d;
+}
+.post-author__name-link h6:hover {
+  color: #fe3e57;
+}
+.post-author__text {
+  height: 100px;
+  overflow: hidden;
+}
+
+.blog-page-content .comments {
+  padding: 30px 0 0 0;
+  border-top: 1px solid #ececec;
+}
+
+.blog-page-content .comments__list {
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 30px;
+}
+
+.blog-page-content-subtitle {
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  color: #29282d;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
 .footer {
   background-color: #f6f6f6;
 }
