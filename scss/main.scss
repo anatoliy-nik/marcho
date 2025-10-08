@@ -1974,6 +1974,11 @@
     margin-bottom: 40px;
     &__img-link {
         grid-row: span 2;
+        img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+        }
     }
     &__name-link h6{
         font-family: 'Roboto-Medium', sans-serif;
@@ -2011,6 +2016,107 @@
     color: $default-dark-color;
     text-transform: uppercase;
     margin-bottom: 30px;
+}
+
+// contacts-page
+
+.contacts-page {
+    padding: 110px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts-map {
+    height: 440px;
+    margin-bottom: 110px;
+}
+
+.contacts-page-info {
+    width: 33.33%;
+    border: 1px dotted pink;
+    &__title {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        color: $default-dark-color;
+        margin-bottom: 20px;
+    }
+    &__text {
+        margin-bottom: 30px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        a {
+            display: block;
+        }
+        a:hover {
+            color: $accent-color;
+        }
+        span {
+            display: block;
+        }
+    }
+    &__item + .contacts-page-info__item {
+        margin-top: 35px;
+    }
+    &__item-icon {
+        min-width: 60px;
+        height: 60px;
+        box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+        margin-right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            fill: $accent-color;
+            height: 20px;
+        }
+    }
+}
+
+.contacts-page-form {
+    width: calc(66.66% - 30px);
+    border: 1px dotted green;
+    box-shadow: 0px 10px 40px 0px rgba(172, 172, 172, 0.3);
+    padding: 50px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 60px 60px 200px 60px;
+    grid-gap: 30px;
+    align-items: start;
+    justify-items: start;
+    h4 {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 58px;
+        color: $default-dark-color;
+        grid-column: span 2;
+        width: 100%;
+    }
+    &__input {
+        background-color: #f6f6f6;
+        padding: 20px 20px;
+        border: none;
+        width: 100%;
+    }
+    &__input[type=phone] {
+        grid-column: span 2;
+        width: 100%;
+    }
+    &__textarea {
+        grid-column: span 2;
+        width: 100%;
+        border: none;
+        padding: 20px 20px;
+        resize: none;
+        background-color: #f6f6f6;
+        height: 100%;
+    }
 }
 
 // footer
