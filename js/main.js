@@ -1,7 +1,70 @@
 $(function () {
+    // бургер кнопка и меню
+    $('.burger-btn').on('click', function() {
+        $('.menu__list').toggleClass('menu__list--active');
+        $('.burger-btn').toggleClass('burger-btn--active');
+    });
+
+    // при клике на заголовок
+     $('.footer-title--slide').on('click', function() {
+        // следующему элементу от ЭТОГО заголовка применяем метод slideToggle()
+        $(this).next().slideToggle();
+        // у ЭТОГО заголовка меняется стрелочка
+        $(this).toggleClass('footer-title--active')
+    });
+
+    // Slick слайдер для анонса блога
+    $('.blog-page-item__img-slider').slick({
+        prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M201.4 297.4C188.9 309.9 188.9 330.2 201.4 342.7L361.4 502.7C373.9 515.2 394.2 515.2 406.7 502.7C419.2 490.2 419.2 469.9 406.7 457.4L269.3 320L406.6 182.6C419.1 170.1 419.1 149.8 406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3L201.3 297.3z"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg></button>',
+        dots: false,
+        arrows: true,
+        infinite: false,
+        autoplay: false
+    });
+
+    // переключение табов в товаре
+    $('.single-product-tabs__titles-item').on('click', function (e) {
+        // отменяет поведение браузера при клике на ссылку, т.е. отменяет переход
+        e.preventDefault();
+        // у всех ссылок убрать класс --active
+        $('.single-product-tabs__titles-item').removeClass('single-product-tabs__titles-item--active');
+        // а той ссылке, по которой клинкнули - добавить
+        $(this).addClass('single-product-tabs__titles-item--active');
+
+        // здесь сделано через display:none у табов, что не есть хорошо
+        // $('.single-product-tabs__content-item').removeClass('single-product-tabs__content-item--active');
+        // $($(this).attr('href')).addClass('single-product-tabs__content-item--active');
+
+        // всем табам добавить класс visually-hidden
+        $('.single-product-tabs__content-item').addClass('visually-hidden');
+        // у той ссылки, по которой кликнули, взять значение атрибута href и у элемента с таким id удалить класс visually-hidden
+        $($(this).attr('href')).removeClass('visually-hidden');
+    });
+
+    // Слайдер фото в товаре
+    // отображение (крупные картинки)
+    $('.slider-for').slick({
+        draggable: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        asNavFor: '.slider-nav',
+        arrows: false
+
+    });
+    // навигация (мелкие картинки)
+    $('.slider-nav').slick({
+        draggable: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        vertical: true,
+        focusOnSelect: true
+    });
 
     // Переключение кнопок отображения каталога (Только визуальное оформление кнопок)
-    $(".catalog-sort__btn").on("click", function() {
+    $(".catalog-sort__btn").on("click", function () {
         // сначала всем кнопкам удалить .active
         $(".catalog-sort__btn").removeClass("catalog-sort__btn--active");
         // та кнопка, по которой кликнули, добавить .active 
@@ -10,12 +73,12 @@ $(function () {
 
     // При клике на #catalog-btn-list каталогу добавить .catalog-box--list
     // Внеш. вид карточек товара будет меняться через новый класс родителя
-    $("#catalog-btn-list").on("click", function() {
+    $("#catalog-btn-list").on("click", function () {
         $(".catalog-box").addClass("catalog-box--list");
     });
 
     // При клике на #catalog-btn-grid у каталога удалить .catalog-box--list
-    $("#catalog-btn-grid").on("click", function() {
+    $("#catalog-btn-grid").on("click", function () {
         $(".catalog-box").removeClass("catalog-box--list");
     });
 
@@ -33,7 +96,7 @@ $(function () {
 
     // Звездный рейтинг
     $(".product-item__stars-box").starRating({
-        initialRating: 4,
+        // initialRating: 4,
         emptyColor: '#ccccce',
         hoverColor: '#ffc35b',
         activeColor: '#ffc35b',
@@ -42,6 +105,23 @@ $(function () {
         starSize: 20,
         minRating: 1,
         readOnly: true,
+        starShape: 'rounded',
+        callback: function (currentRating, $el) {
+            // make a server call here
+        }
+    });
+
+    $(".comments__item-stars-box").starRating({
+        // initialRating: 4,
+        emptyColor: '#ccccce',
+        hoverColor: '#ffc35b',
+        activeColor: '#ffc35b',
+        useGradient: false,
+        strokeWidth: 0,
+        starSize: 20,
+        minRating: 1,
+        readOnly: true,
+        starShape: 'rounded',
         callback: function (currentRating, $el) {
             // make a server call here
         }
@@ -69,7 +149,7 @@ $(function () {
     });
 
     // jQuery Form Styler 
-    $(".select-style").styler();
+    $(".select-style, .single-product-basic__sum-input").styler();
 
 
     // Таймер. НУЖНО СТАВИТЬ ПОСЛЕДНИМ!. Т.к. плагины, идущие после него, не работают

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/star-rating-svg.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a class="logo-link" href="/">
+                    <img src="img/logo.png" alt="logo">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--active" href="/">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="/catalog.html">Catalog</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="/product.html">Product</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="/blog.html">Blog</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="/blog-detail.html">Page</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="/contacts.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="user-nav">
+                    <ul class="user-nav__list">
+                        <li class="user-nav__item">
+                            <a class="user-nav__link" href="/login.html">
+
+                            </a>
+                        </li>
+                        <li class="user-nav__item">
+                            <a class="user-nav__link" href="#">
+
+                            </a>
+                        </li>
+                        <li class="user-nav__item">
+                            <a class="user-nav__link" href="/login.html">
+                                <span class="user-nav__number">3</span>
+                            </a>
+                        </li>
+                        <li class="user-nav__item">
+                            <a class="user-nav__link" href="/login.html">
+                                <span class="user-nav__number">7</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="top">
+            <div class="top__wrapper-img" style="background-image: url(../img/top-bg.jpg);">
+                <div class="container">
+                    <div class="top__content">
+                        <h1 class="page-title">Blog</h1>
+                        <div class="breadcrumbs">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="/">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <span>Blog</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-page">
+            <div class="container">
+                <div class="blog-page-wrapper">
+                    <div class="blog-page-content">
+                        <div class="blog-page-item">
+                            <a class="blog-page-item__img-link" href="#">
+                                <img src="img/blog-page/item-1.jpg" alt="blog item img">
+                            </a>
+                            <div class="blog-page-item__content">
+                                <a class="blog-page-item__title-link" href="#">
+                                    <h3>Be prepared to sweat a lot, but at least in the
+                                        Southern
+                                        regions there’s a good chance you’ll get to enjoy!
+                                    </h3>
+                                </a>
+                                <div class="blog-box__info blog-page-item__info">
+                                    <a class="blog-box__author-link blog-page-item__author-link" href="#">By Admin</a>
+                                    <span class="blog-box__date blog-page-item__date">10 January, 2020</span>
+                                </div>
+                                <div class="blog-page-item__text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                        gravida. Risus commodoami viverra maycenas acchmsan lacus vel facilisis. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-page-item blog-page-item--slider">
+                            <div class="blog-page-item__img-slider" href="#">
+                                <img src="img/blog-page/item-2.jpg" alt="blog item slider img">
+                                <img src="img/blog-page/item-3.jpg" alt="blog item slider img">
+                                <img src="img/blog-page/item-1.jpg" alt="blog item slider img">
+                            </div>
+                            <div class="blog-page-item__content">
+                                <a class="blog-page-item__title-link" href="#">
+                                    <h3>Be prepared to sweat a lot, but at least in the
+                                        Southern
+                                        regions there’s a good chance you’ll get to enjoy!
+                                    </h3>
+                                </a>
+                                <div class="blog-box__info blog-page-item__info">
+                                    <a class="blog-box__author-link blog-page-item__author-link" href="#">By Admin</a>
+                                    <span class="blog-box__date blog-page-item__date">11 January, 2020</span>
+                                </div>
+                                <div class="blog-page-item__text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Risus commodoami viverra maycenas
+                                        acchmsan lacus vel facilisis. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-page-item blog-page-item--popup">
+                            <div class="blog-page-item__img-popup" href="#">
+                                <img src="img/blog-page/item-3.jpg" alt="blog item img popup">
+                                <a class="blog-page-item__link-popup" href="https://www.youtube.com/watch?v=PUdyuKaGQd4"
+                                    data-fancybox>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                                        <path
+                                            d="M187.2 100.9C174.8 94.1 159.8 94.4 147.6 101.6C135.4 108.8 128 121.9 128 136L128 504C128 518.1 135.5 531.2 147.6 538.4C159.7 545.6 174.8 545.9 187.2 539.1L523.2 355.1C536 348.1 544 334.6 544 320C544 305.4 536 291.9 523.2 284.9L187.2 100.9z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="blog-page-item__content">
+                                <a class="blog-page-item__title-link" href="#">
+                                    <h3>Be prepared to sweat a lot, but at least in the
+                                        Southern
+                                        regions there’s a good chance you’ll get to enjoy!
+                                    </h3>
+                                </a>
+                                <div class="blog-box__info blog-page-item__info">
+                                    <a class="blog-box__author-link blog-page-item__author-link" href="#">By Admin</a>
+                                    <span class="blog-box__date blog-page-item__date">12 January, 2020</span>
+                                </div>
+                                <div class="blog-page-item__text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                        gravida.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-page-aside">
+                        <div class="search blog-page-aside__item">
+                            <h3 class="filters-title">Search</h3>
+                            <form class="search__form" action="#">
+                                <input class="search__input" type="text" placeholder="Search your keyword....">
+                                <button class="accent-btn" type="button"></button>
+                            </form>
+                        </div>
+                        <div class="person-box blog-page-aside__item">
+                            <div class="person">
+                                <img class="person__img" src="img/avatars/person-1.jpg" alt="person">
+                                <h6 class="person__name">Tom D. Maianay</h6>
+                                <span class="person__position">CEO & Founder</span>
+                                <p class="person__about">Lorem ipsum dolor sit amet, consectetum adipiscing eit, sed do
+                                    eiusmod temporary incididunt ut labore et dolore magnaamo aliqua. Qus ipsum
+                                    suspendisse ultrices an gravida. Risus commodo
+                                </p>
+                                <ul class="social-list">
+                                    <li class="social-list__item">
+                                        <a class="social-list__link" href="#">
+                                            <!-- <img class="social-list__img" src="img/icons/svg-min/facebook.svg" alt="facebook"> -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px" height="18px" viewBox="0 0 18 18" version="1.1">
+                                                <g>
+                                                    <path d="M 6.75 10.21875 L 6.75 16.199219 L 10.011719 16.199219 L 10.011719 10.21875 L 12.445312 10.21875 L 12.953125 7.46875 L 10.011719 7.46875 L 10.011719 6.492188 C 10.011719 5.039062 10.582031 4.484375 12.058594 4.484375 C 12.515625 4.484375 12.882812 4.496094 13.097656 4.515625 L 13.097656 2.023438 C 12.695312 1.914062 11.710938 1.800781 11.144531 1.800781 C 8.136719 1.800781 6.75 3.21875 6.75 6.28125 L 6.75 7.46875 L 4.894531 7.46875 L 4.894531 10.21875 Z M 6.75 10.21875 "></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a class="social-list__link" href="#">
+                                            <!-- <img class="social-list__img" src="img/icons/svg-min/twitter.svg" alt="twitter"> -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px" height="18px" viewBox="0 0 18 18" version="1.1">
+                                                <g>
+                                                    <path d="M 14.71875 6.066406 C 14.730469 6.191406 14.730469 6.324219 14.730469 6.449219 C 14.730469 10.351562 11.757812 14.847656 6.332031 14.847656 C 4.65625 14.847656 3.105469 14.363281 1.800781 13.523438 C 2.035156 13.550781 2.265625 13.558594 2.511719 13.558594 C 3.890625 13.558594 5.160156 13.09375 6.175781 12.300781 C 4.878906 12.269531 3.792969 11.421875 3.417969 10.25 C 3.601562 10.28125 3.78125 10.296875 3.972656 10.296875 C 4.238281 10.296875 4.503906 10.261719 4.75 10.195312 C 3.398438 9.921875 2.386719 8.734375 2.386719 7.296875 L 2.386719 7.261719 C 2.777344 7.480469 3.234375 7.617188 3.71875 7.636719 C 2.921875 7.105469 2.402344 6.203125 2.402344 5.179688 C 2.402344 4.628906 2.546875 4.125 2.804688 3.6875 C 4.257812 5.480469 6.441406 6.648438 8.890625 6.773438 C 8.84375 6.554688 8.816406 6.328125 8.816406 6.101562 C 8.816406 4.476562 10.132812 3.148438 11.765625 3.148438 C 12.617188 3.148438 13.382812 3.507812 13.925781 4.082031 C 14.589844 3.953125 15.234375 3.707031 15.796875 3.371094 C 15.578125 4.054688 15.113281 4.628906 14.5 4.996094 C 15.09375 4.929688 15.671875 4.765625 16.199219 4.539062 C 15.796875 5.125 15.292969 5.644531 14.71875 6.066406 Z M 14.71875 6.066406 "></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a class="social-list__link" href="#">
+                                            <!-- <img class="social-list__img" src="img/icons/svg-min/linkedin.svg" alt="linkedin"> -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px" height="18px" viewBox="0 0 18 18" version="1.1">
+                                                <g>
+                                                    <path d="M 5.519531 14.398438 L 2.90625 14.398438 L 2.90625 5.988281 L 5.519531 5.988281 Z M 4.214844 4.839844 C 3.378906 4.839844 2.699219 4.148438 2.699219 3.3125 C 2.699219 2.910156 2.859375 2.527344 3.144531 2.246094 C 3.429688 1.960938 3.8125 1.800781 4.214844 1.800781 C 4.613281 1.800781 4.996094 1.960938 5.28125 2.246094 C 5.566406 2.527344 5.726562 2.914062 5.726562 3.3125 C 5.726562 4.148438 5.046875 4.839844 4.214844 4.839844 Z M 15.296875 14.398438 L 12.691406 14.398438 L 12.691406 10.304688 C 12.691406 9.328125 12.671875 8.078125 11.332031 8.078125 C 9.972656 8.078125 9.765625 9.136719 9.765625 10.234375 L 9.765625 14.398438 L 7.15625 14.398438 L 7.15625 5.988281 L 9.660156 5.988281 L 9.660156 7.136719 L 9.699219 7.136719 C 10.046875 6.472656 10.898438 5.777344 12.167969 5.777344 C 14.8125 5.777344 15.300781 7.519531 15.300781 9.777344 L 15.300781 14.398438 Z M 15.296875 14.398438 "></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a class="social-list__link" href="#">
+                                            <!-- <img class="social-list__img" src="img/icons/svg-min/pinterest.svg" alt="pinterest"> -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px" height="18px" viewBox="0 0 18 18" version="1.1">
+                                                <g>
+                                                    <path d="M 9.335938 1.984375 C 6.453125 1.984375 3.601562 3.90625 3.601562 7.019531 C 3.601562 9 4.714844 10.125 5.390625 10.125 C 5.667969 10.125 5.828125 9.347656 5.828125 9.128906 C 5.828125 8.867188 5.160156 8.3125 5.160156 7.222656 C 5.160156 4.960938 6.882812 3.359375 9.109375 3.359375 C 11.023438 3.359375 12.441406 4.445312 12.441406 6.445312 C 12.441406 7.941406 11.84375 10.742188 9.902344 10.742188 C 9.203125 10.742188 8.601562 10.234375 8.601562 9.507812 C 8.601562 8.445312 9.347656 7.417969 9.347656 6.320312 C 9.347656 4.457031 6.703125 4.796875 6.703125 7.046875 C 6.703125 7.519531 6.765625 8.039062 6.976562 8.472656 C 6.585938 10.140625 5.792969 12.632812 5.792969 14.351562 C 5.792969 14.882812 5.871094 15.40625 5.921875 15.9375 C 6.015625 16.046875 5.96875 16.035156 6.113281 15.980469 C 7.53125 14.039062 7.480469 13.660156 8.121094 11.121094 C 8.46875 11.777344 9.363281 12.132812 10.070312 12.132812 C 13.058594 12.132812 14.398438 9.222656 14.398438 6.597656 C 14.398438 3.804688 11.988281 1.984375 9.335938 1.984375 Z M 9.335938 1.984375 "></path>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="latest-post-box blog-page-aside__item">
+                            <div class="latest-post">
+                                <h3 class="filters-title">Latest post</h3>
+                                <ul class="latest-post__list">
+                                    <li class="latest-post__item">
+                                        <a class="latest-post__link-img" href="#">
+                                            <img src="img/blog/post-1.jpg" alt="blog post 1">
+                                        </a>
+                                        <a class="latest-post__link-title" href="#">
+                                            <h5>Lorem ipsum dolor suitabl amet, adiping elit.</h5>
+                                        </a>
+                                        <p class="latest-post__date">16 Feb, 2019</p>
+                                    </li>
+                                    <li class="latest-post__item">
+                                        <a class="latest-post__link-img" href="#">
+                                            <img src="img/blog/post-2.jpg" alt="blog post 1">
+                                        </a>
+                                        <a class="latest-post__link-title" href="#">
+                                            <h5>Lorem ipsum dolor suitabl amet, adiping elit.</h5>
+                                        </a>
+                                        <p class="latest-post__date">16 Feb, 2019</p>
+                                    </li>
+                                    <li class="latest-post__item">
+                                        <a class="latest-post__link-img" href="#">
+                                            <img src="img/blog/post-3.jpg" alt="blog post 1">
+                                        </a>
+                                        <a class="latest-post__link-title" href="#">
+                                            <h5>Lorem ipsum dolor suitabl amet, adiping elit.</h5>
+                                        </a>
+                                        <p class="latest-post__date">16 Feb, 2019</p>
+                                    </li>
+                                    <li class="latest-post__item">
+                                        <a class="latest-post__link-img" href="#">
+                                            <img src="img/blog/post-4.jpg" alt="blog post 1">
+                                        </a>
+                                        <a class="latest-post__link-title" href="#">
+                                            <h5>Lorem ipsum dolor suitabl amet, adiping elit.</h5>
+                                        </a>
+                                        <p class="latest-post__date">16 Feb, 2019</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="category-filter blog-page-aside__item">
+                            <h3 class="filters-title">Category</h3>
+                            <form class="category-filter__form" action="#">
+                                <ul class="category-filter__list">
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox"
+                                                checked="">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Woman</span>
+                                                <span class="category-filter__number">48</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Man</span>
+                                                <span class="category-filter__number">30</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Fashion</span>
+                                                <span class="category-filter__number">121</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Hot Dresses</span>
+                                                <span class="category-filter__number">22</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Accessories</span>
+                                                <span class="category-filter__number">88</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li class="category-filter__item">
+                                        <label class="category-filter__label">
+                                            <input class="category-filter__input visually-hidden" type="checkbox">
+                                            <div class="category-filter__checkmark">
+                                                <span class="category-filter__category">Sale Products</span>
+                                                <span class="category-filter__number">92</span>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="popular-tags blog-page-aside__item">
+                            <h3 class="filters-title">Papular tags</h3>
+                            <form class="popular-tags__form" action="#">
+                                <ul class="popular-tags__list">
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox"
+                                                checked="">
+                                            <span class="popular-tags__tag">Sweetshirt</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">Man Accessories</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">Fashion</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">Polo</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">T-Shirt</span>
+                                        </label>
+                                    </li>
+                                    <li class="popular-tags__item">
+                                        <label class="popular-tags__label">
+                                            <input class="popular-tags__input visually-hidden" type="checkbox">
+                                            <span class="popular-tags__tag">Jewellery</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top__item footer-top__contact">
+                    <a class="logo-link footer-title" href="#">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <ul class="footer-top__list">
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">
+                                No. 342 - London Oxford Street, 012 United States
+                            </a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="mailto:youremail@gmail.com">
+                                Youremail@gmail.com
+                            </a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="tel:+02838388393">
+                                +0283 838 8393
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="social-list">
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <!-- <img class="social-list__img" src="img/icons/svg-min/facebook.svg" alt="facebook"> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="px" height="18px" viewBox="0 0 18 18" version="1.1">
+                                    <g>
+                                        <path
+                                            d="M 6.75 10.21875 L 6.75 16.199219 L 10.011719 16.199219 L 10.011719 10.21875 L 12.445312 10.21875 L 12.953125 7.46875 L 10.011719 7.46875 L 10.011719 6.492188 C 10.011719 5.039062 10.582031 4.484375 12.058594 4.484375 C 12.515625 4.484375 12.882812 4.496094 13.097656 4.515625 L 13.097656 2.023438 C 12.695312 1.914062 11.710938 1.800781 11.144531 1.800781 C 8.136719 1.800781 6.75 3.21875 6.75 6.28125 L 6.75 7.46875 L 4.894531 7.46875 L 4.894531 10.21875 Z M 6.75 10.21875 " />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <!-- <img class="social-list__img" src="img/icons/svg-min/twitter.svg" alt="twitter"> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="px" height="18px" viewBox="0 0 18 18" version="1.1">
+                                    <g>
+                                        <path
+                                            d="M 14.71875 6.066406 C 14.730469 6.191406 14.730469 6.324219 14.730469 6.449219 C 14.730469 10.351562 11.757812 14.847656 6.332031 14.847656 C 4.65625 14.847656 3.105469 14.363281 1.800781 13.523438 C 2.035156 13.550781 2.265625 13.558594 2.511719 13.558594 C 3.890625 13.558594 5.160156 13.09375 6.175781 12.300781 C 4.878906 12.269531 3.792969 11.421875 3.417969 10.25 C 3.601562 10.28125 3.78125 10.296875 3.972656 10.296875 C 4.238281 10.296875 4.503906 10.261719 4.75 10.195312 C 3.398438 9.921875 2.386719 8.734375 2.386719 7.296875 L 2.386719 7.261719 C 2.777344 7.480469 3.234375 7.617188 3.71875 7.636719 C 2.921875 7.105469 2.402344 6.203125 2.402344 5.179688 C 2.402344 4.628906 2.546875 4.125 2.804688 3.6875 C 4.257812 5.480469 6.441406 6.648438 8.890625 6.773438 C 8.84375 6.554688 8.816406 6.328125 8.816406 6.101562 C 8.816406 4.476562 10.132812 3.148438 11.765625 3.148438 C 12.617188 3.148438 13.382812 3.507812 13.925781 4.082031 C 14.589844 3.953125 15.234375 3.707031 15.796875 3.371094 C 15.578125 4.054688 15.113281 4.628906 14.5 4.996094 C 15.09375 4.929688 15.671875 4.765625 16.199219 4.539062 C 15.796875 5.125 15.292969 5.644531 14.71875 6.066406 Z M 14.71875 6.066406 " />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <!-- <img class="social-list__img" src="img/icons/svg-min/linkedin.svg" alt="linkedin"> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="px" height="18px" viewBox="0 0 18 18" version="1.1">
+                                    <g>
+                                        <path
+                                            d="M 5.519531 14.398438 L 2.90625 14.398438 L 2.90625 5.988281 L 5.519531 5.988281 Z M 4.214844 4.839844 C 3.378906 4.839844 2.699219 4.148438 2.699219 3.3125 C 2.699219 2.910156 2.859375 2.527344 3.144531 2.246094 C 3.429688 1.960938 3.8125 1.800781 4.214844 1.800781 C 4.613281 1.800781 4.996094 1.960938 5.28125 2.246094 C 5.566406 2.527344 5.726562 2.914062 5.726562 3.3125 C 5.726562 4.148438 5.046875 4.839844 4.214844 4.839844 Z M 15.296875 14.398438 L 12.691406 14.398438 L 12.691406 10.304688 C 12.691406 9.328125 12.671875 8.078125 11.332031 8.078125 C 9.972656 8.078125 9.765625 9.136719 9.765625 10.234375 L 9.765625 14.398438 L 7.15625 14.398438 L 7.15625 5.988281 L 9.660156 5.988281 L 9.660156 7.136719 L 9.699219 7.136719 C 10.046875 6.472656 10.898438 5.777344 12.167969 5.777344 C 14.8125 5.777344 15.300781 7.519531 15.300781 9.777344 L 15.300781 14.398438 Z M 15.296875 14.398438 " />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <!-- <img class="social-list__img" src="img/icons/svg-min/pinterest.svg" alt="pinterest"> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="px" height="18px" viewBox="0 0 18 18" version="1.1">
+                                    <g>
+                                        <path
+                                            d="M 9.335938 1.984375 C 6.453125 1.984375 3.601562 3.90625 3.601562 7.019531 C 3.601562 9 4.714844 10.125 5.390625 10.125 C 5.667969 10.125 5.828125 9.347656 5.828125 9.128906 C 5.828125 8.867188 5.160156 8.3125 5.160156 7.222656 C 5.160156 4.960938 6.882812 3.359375 9.109375 3.359375 C 11.023438 3.359375 12.441406 4.445312 12.441406 6.445312 C 12.441406 7.941406 11.84375 10.742188 9.902344 10.742188 C 9.203125 10.742188 8.601562 10.234375 8.601562 9.507812 C 8.601562 8.445312 9.347656 7.417969 9.347656 6.320312 C 9.347656 4.457031 6.703125 4.796875 6.703125 7.046875 C 6.703125 7.519531 6.765625 8.039062 6.976562 8.472656 C 6.585938 10.140625 5.792969 12.632812 5.792969 14.351562 C 5.792969 14.882812 5.871094 15.40625 5.921875 15.9375 C 6.015625 16.046875 5.96875 16.035156 6.113281 15.980469 C 7.53125 14.039062 7.480469 13.660156 8.121094 11.121094 C 8.46875 11.777344 9.363281 12.132812 10.070312 12.132812 C 13.058594 12.132812 14.398438 9.222656 14.398438 6.597656 C 14.398438 3.804688 11.988281 1.984375 9.335938 1.984375 Z M 9.335938 1.984375 " />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-top__item footer-top__info">
+                    <h6 class="footer-title">Useful Links</h6>
+                    <ul class="footer-top__list">
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">About Us</a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">Privacy Policy</a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">Privacy Policy</a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">Contact Us</a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">Help & Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-top__item footer-top__info">
+                    <h6 class="footer-title">My Account</h6>
+                    <ul class="footer-top__list">
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">My Account</a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">My Cart</a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">My WIshlist</a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">Registration</a>
+                        </li>
+                        <li class="footer-top__list-item">
+                            <a class="footer-top__list-link" href="#">Check Out</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-top__item footer-top__subscribe">
+                    <h6 class="footer-title">My Account</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <form class="footer-top__form" action="#">
+                        <input class="footer-top__form-input" type="email" placeholder="Your email address" required>
+                        <button class="footer-top__form-btn accent-btn" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom__copy">
+                    <p>© 2019 CodeAstrology. All Rights Reserved.</p>
+                </div>
+                <div class="accept">
+                    <p>We Accept</p>
+                    <ul class="accept__list">
+                        <li class="accept__item">
+                            <img class="accept__img" src="img/icons/mastercard.png" alt="mastercard">
+                        </li>
+                        <li class="accept__item">
+                            <img class="accept__img" src="img/icons/visa.png" alt="mastercard">
+                        </li>
+                        <li class="accept__item">
+                            <img class="accept__img" src="img/icons/paypal.png" alt="mastercard">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/jquery.star-rating-svg.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

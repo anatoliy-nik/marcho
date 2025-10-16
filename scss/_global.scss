@@ -12,6 +12,14 @@ body {
     flex-direction: column;
 }
 
+a {
+    font-size: 16px;
+    color: $default-light-color;
+    line-height: 26px;
+    font-family: 'Quicksand-Medium', sans-serif;
+    font-weight: 500;
+}
+
 .main {
     flex-grow: 1;
 }
@@ -103,6 +111,8 @@ body {
     margin-bottom: 30px;
 }
 
+// breadcrumbs
+
 .breadcrumbs {
     &__list {
         display: flex;
@@ -169,3 +179,62 @@ body {
     white-space: nowrap;
     border: 0;
 }
+
+// pagination
+
+.pagination {
+    padding: 40px 0;
+    text-transform: uppercase;
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+    &__item {
+        margin: 0 15px;
+    }
+    &__link {
+        position: relative;
+    }
+    &__link:hover {
+        color: $accent-color;
+        path {
+            fill: $accent-color;
+        }
+    }
+    &__link--active {
+        color: $accent-color;
+    }
+    &__link--prev, &__link--next {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+  
+}
+
+// filters
+// .filter-pink {
+//     background-color: $filter-pink;
+// }
+// .filter-grey {
+//     background-color: $filter-grey;
+// }
+// .filter-orange {
+//     background-color: $filter-orange;
+// }
+// .filter-violett {
+//     background-color: $filter-violett;
+// }
+// .filter-green {
+//     background-color: $filter-green;
+// }
+// .filter-red {
+//     background-color: $filter-red;
+// }
+// .filter-blue {
+//     background-color: $filter-blue;
+// }
+// .filter-black {
+//     background-color: $filter-black;
+// }

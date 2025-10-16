@@ -1,0 +1,171 @@
+// @media (max-width: 1200px) {
+// уже не нужно, т.к. макет шириной 1170px, т.е. взалит в этот брейкпоинт
+// главное, чтобы между 1170px и 992px все было ок
+// }
+
+.burger-btn {
+    display: none;
+}
+
+// клик по заголовку не рабтает
+.footer-title--slide {
+        pointer-events: none;
+    }
+
+@media (max-width: 992px) {
+    .menu {
+        order: 1;
+        margin-left: 30px;
+    }
+    .menu__list {
+        // display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        justify-content: end;
+        transform: translateY(-600%);
+        transition: all .3s;
+        background-color: #fff;
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        padding: 10px 10px;
+        justify-content: center;
+        &--active {
+            transform: translateY(0);
+        }
+    }
+    .burger-btn {
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::after, &::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: $default-dark-color;
+            left: 0;
+            transition: all .3s;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            background-color: $default-dark-color;
+            height: 2px;
+            width: 100%;
+            display: block;
+            transition: all .3s;
+        }
+        &--active {
+            &::before {
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+            &::after {
+                bottom: 50%;
+                transform: translateY(50%) rotate(-45deg);
+            }
+            span {
+                opacity: 0;
+            }
+        }
+    }
+    .user-nav {
+        margin-left: auto;
+    }
+    .header__wrapper {
+        position: relative;
+    }
+
+    .footer-top {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer-top__subscribe {
+        width: 60%;
+        margin-top: 30px;
+    }
+    .footer-top__contact {
+        width: 30%;
+    }
+    .footer-top__info {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top__contact {
+        width: 100%;
+    }
+    .footer-top__subscribe {
+        width: 100%;
+    }
+    .footer-top__info {
+        margin-top: 30px;
+    }
+    .footer-top {
+        justify-content: start;
+    }
+    .footer-top__list--slide {
+        display: block;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .header__wrapper {
+        flex-wrap: wrap;
+    }
+    .user-nav {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .menu {
+        order: 0;
+    }
+    .user-nav__list {
+        // justify-content: center;
+    }
+    .menu__list {
+        transform: translateY(-700%);
+        flex-direction: column;
+        align-items: center;
+        &--active {
+            transform: translateY(0);
+        }
+    }
+    .menu__item + .menu__item {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .footer-top__info {
+        width: 100%;
+    }
+    .footer-bottom {
+        flex-wrap: wrap;
+    }
+    .accept {
+        margin-top: 15px;
+    }
+    .footer-top__list--slide {
+        display: none;
+        // в main.js при клике на заголовок, метод slideToggle()
+        // будет сам присваивать этому списку display:block
+    }
+    .footer-title--slide {
+        pointer-events: auto;
+        // клик по заголовку по умолчанию
+    }
+
+}

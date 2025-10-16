@@ -19,32 +19,35 @@
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <a class="logo-link" href="#">
+                <a class="logo-link" href="/">
                     <img src="img/logo.png" alt="logo">
                 </a>
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link menu__link--active" href="#">Home</a>
+                            <a class="menu__link menu__link--active" href="/">Home</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Shope</a>
+                            <a class="menu__link" href="/catalog.html">Catalog</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Page</a>
+                            <a class="menu__link" href="/product.html">Product</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Blog</a>
+                            <a class="menu__link" href="/blog.html">Blog</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Contact</a>
+                            <a class="menu__link" href="/blog-detail.html">Page</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="/contacts.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="user-nav">
                     <ul class="user-nav__list">
                         <li class="user-nav__item">
-                            <a class="user-nav__link" href="#">
+                            <a class="user-nav__link" href="/login.html">
 
                             </a>
                         </li>
@@ -54,12 +57,12 @@
                             </a>
                         </li>
                         <li class="user-nav__item">
-                            <a class="user-nav__link" href="#">
+                            <a class="user-nav__link" href="/login.html">
                                 <span class="user-nav__number">3</span>
                             </a>
                         </li>
                         <li class="user-nav__item">
-                            <a class="user-nav__link" href="#">
+                            <a class="user-nav__link" href="/login.html">
                                 <span class="user-nav__number">7</span>
                             </a>
                         </li>
@@ -78,7 +81,7 @@
                         <div class="breadcrumbs">
                             <ul class="breadcrumbs__list">
                                 <li class="breadcrumbs__item">
-                                    <a class="breadcrumbs__link" href="#">Home</a>
+                                    <a class="breadcrumbs__link" href="/">Home</a>
                                 </li>
                                 <li class="breadcrumbs__item">
                                     <span>Catalog</span>
@@ -128,21 +131,21 @@
                                         <label class="color-filter__label">
                                             <span class="color-filter__color">Blue (15)</span>
                                             <input class="color-filter__input visually-hidden" type="checkbox" checked>
-                                            <span class="color-filter__checkmark color-filter__checkmark--blue"></span>
+                                            <span class="color-filter__checkmark filter-blue"></span>
                                         </label>
                                     </li>
                                     <li class="color-filter__item">
                                         <label class="color-filter__label">
                                             <span class="color-filter__color">Red (09)</span>
                                             <input class="color-filter__input visually-hidden" type="checkbox">
-                                            <span class="color-filter__checkmark color-filter__checkmark--red"></span>
+                                            <span class="color-filter__checkmark filter-red"></span>
                                         </label>
                                     </li>
                                     <li class="color-filter__item">
                                         <label class="color-filter__label">
                                             <span class="color-filter__color">Green (28)</span>
                                             <input class="color-filter__input visually-hidden" type="checkbox">
-                                            <span class="color-filter__checkmark color-filter__checkmark--green"></span>
+                                            <span class="color-filter__checkmark filter-green"></span>
                                         </label>
                                     </li>
                                     <li class="color-filter__item">
@@ -150,14 +153,14 @@
                                             <span class="color-filter__color">Orange (11)</span>
                                             <input class="color-filter__input visually-hidden" type="checkbox">
                                             <span
-                                                class="color-filter__checkmark color-filter__checkmark--orange"></span>
+                                                class="color-filter__checkmark filter-orange"></span>
                                         </label>
                                     </li>
                                     <li class="color-filter__item">
                                         <label class="color-filter__label">
                                             <span class="color-filter__color">Black (05)</span>
                                             <input class="color-filter__input visually-hidden" type="checkbox">
-                                            <span class="color-filter__checkmark color-filter__checkmark--black"></span>
+                                            <span class="color-filter__checkmark filter-black"></span>
                                         </label>
                                     </li>
                                     <li class="color-filter__item">
@@ -165,7 +168,7 @@
                                             <span class="color-filter__color">Purple (21)</span>
                                             <input class="color-filter__input visually-hidden" type="checkbox">
                                             <span
-                                                class="color-filter__checkmark color-filter__checkmark--purple"></span>
+                                                class="color-filter__checkmark filter-violett"></span>
                                         </label>
                                     </li>
                                 </ul>
@@ -619,6 +622,47 @@
                                     <button class="dark-btn" type="button">Add to cart</button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="pagination">
+                            <ul class="pagination__list">
+                                <li class="pagination__item">
+                                    <a class="pagination__link pagination__link--prev" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="4.969" height="9.97"
+                                            viewBox="0 0 4.969 9.97">
+                                            <path fill="#8d8d8d" fill-rule="evenodd"
+                                                d="M973.64,3013.16a0.745,0.745,0,0,1,.178-0.49l3.741-4.28a0.548,0.548,0,0,1,.863,0,0.762,0.762,0,0,1,0,.98l-3.311,3.79,3.31,3.79a0.776,0.776,0,0,1,0,.99,0.56,0.56,0,0,1-.862,0l-3.741-4.28a0.772,0.772,0,0,1-.178-0.5h0Zm0,0"
+                                                transform="translate(-973.625 -3008.19)" />
+                                        </svg>
+                                        Previous
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">1</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">2</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link pagination__link--active" href="#">3</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <span href="#">...</span>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">10</a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link pagination__link--next" href="#">
+                                        Next
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="10"
+                                            viewBox="0 0 5 10">
+                                            <path fill="#8d8d8d" fill-rule="evenodd"
+                                                d="M1347,3013.18a0.816,0.816,0,0,0-.17-0.5l-3.77-4.29a0.556,0.556,0,0,0-.87,0,0.771,0.771,0,0,0,0,.99l3.33,3.8-3.33,3.8a0.771,0.771,0,0,0,0,.99,0.568,0.568,0,0,0,.87,0l3.77-4.3a0.715,0.715,0,0,0,.17-0.49h0Zm0,0"
+                                                transform="translate(-1342 -3008.19)" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
