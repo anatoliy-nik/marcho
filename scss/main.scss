@@ -24,7 +24,7 @@
         display: flex;
     }
     &__item + .menu__item {
-        margin-left: 38px;
+        margin-left: 30px;
     }
     &__link {
         color: $default-dark-color;
@@ -2142,19 +2142,21 @@
         // border: 1px dotted red;
     }
     &__item + .footer-top__item {
-        margin-left: 30px;
+        // margin-left: 30px;
     }
     &__contact {
-        width: 270px;
+        width: 20%;
     }
     &__contact .footer-top__list {
         margin-bottom: 30px;
     }
     &__info {
-        width: 170px;
+        width: 20%;
+        padding-left: 30px;
     }
     &__subscribe {
-        max-width: 470px;
+        // max-width: 40%;
+        width: 40%;
     }
     &__subscribe p {
         margin-bottom: 30px;

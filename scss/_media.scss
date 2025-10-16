@@ -7,6 +7,11 @@
     display: none;
 }
 
+// клик по заголовку не рабтает
+.footer-title--slide {
+        pointer-events: none;
+    }
+
 @media (max-width: 992px) {
     .menu {
         order: 1;
@@ -21,6 +26,11 @@
         justify-content: end;
         transform: translateY(-600%);
         transition: all .3s;
+        background-color: #fff;
+        border-top: 1px solid #ececec;
+        border-bottom: 1px solid #ececec;
+        padding: 10px 10px;
+        justify-content: center;
         &--active {
             transform: translateY(0);
         }
@@ -77,9 +87,39 @@
     .header__wrapper {
         position: relative;
     }
+
+    .footer-top {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer-top__subscribe {
+        width: 60%;
+        margin-top: 30px;
+    }
+    .footer-top__contact {
+        width: 30%;
+    }
+    .footer-top__info {
+        width: 30%;
+    }
 }
 
 @media (max-width: 768px) {
+    .footer-top__contact {
+        width: 100%;
+    }
+    .footer-top__subscribe {
+        width: 100%;
+    }
+    .footer-top__info {
+        margin-top: 30px;
+    }
+    .footer-top {
+        justify-content: start;
+    }
+    .footer-top__list--slide {
+        display: block;
+    }
 
 }
 
@@ -100,7 +140,7 @@
     .menu__list {
         transform: translateY(-700%);
         flex-direction: column;
-        align-items: end;
+        align-items: center;
         &--active {
             transform: translateY(0);
         }
@@ -109,4 +149,23 @@
         margin-left: 0;
         margin-top: 15px;
     }
+    .footer-top__info {
+        width: 100%;
+    }
+    .footer-bottom {
+        flex-wrap: wrap;
+    }
+    .accept {
+        margin-top: 15px;
+    }
+    .footer-top__list--slide {
+        display: none;
+        // в main.js при клике на заголовок, метод slideToggle()
+        // будет сам присваивать этому списку display:block
+    }
+    .footer-title--slide {
+        pointer-events: auto;
+        // клик по заголовку по умолчанию
+    }
+
 }

@@ -1,8 +1,16 @@
 $(function () {
-
+    // бургер кнопка и меню
     $('.burger-btn').on('click', function() {
         $('.menu__list').toggleClass('menu__list--active');
         $('.burger-btn').toggleClass('burger-btn--active');
+    });
+
+    // при клике на заголовок
+     $('.footer-title--slide').on('click', function() {
+        // следующему элементу от ЭТОГО заголовка применяем метод slideToggle()
+        $(this).next().slideToggle();
+        // у ЭТОГО заголовка меняется стрелочка
+        $(this).toggleClass('footer-title--active')
     });
 
     // Slick слайдер для анонса блога
