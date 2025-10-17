@@ -379,14 +379,13 @@ a {
   background-image: url(../img/slider/bg-slider.png);
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 632px;
+  border: 1px solid green;
 }
 .top-slider__container {
   max-width: 1460px;
   margin: 0 auto;
   padding: 0 15px;
   padding-left: 145px;
-  border: 1px dotted #ccc;
 }
 .top-slider__inner {
   display: -webkit-box;
@@ -397,7 +396,7 @@ a {
           justify-content: space-between;
 }
 .top-slider__content {
-  max-width: 570px;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -433,7 +432,11 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: -70px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .top-slider .slick-dots li {
   margin: 0 5px;
@@ -2663,6 +2666,21 @@ a {
   display: none;
 }
 
+.top-slider__img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu__list--active {
+  z-index: 1;
+}
+
+@media (max-width: 1200px) {
+  .top-slider__container {
+    padding-left: 15px;
+  }
+}
 @media (max-width: 992px) {
   .menu {
     -webkit-box-ordinal-group: 2;
@@ -2768,6 +2786,17 @@ a {
   .footer-top__info {
     width: 30%;
   }
+  .top-slider__title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+  .top-slider__img {
+    margin-right: -15px;
+    width: 40%;
+  }
+  .top-slider__content {
+    width: 60%;
+  }
 }
 @media (max-width: 768px) {
   .footer-top__contact {
@@ -2783,6 +2812,12 @@ a {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+  }
+  .top-slider .slick-slide img {
+    display: none;
+  }
+  .top-slider__content {
+    width: 80%;
   }
 }
 @media (max-width: 576px) {
@@ -2860,5 +2895,18 @@ a {
   .footer-title--slide-active::after {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
+  }
+  .top-slider__content {
+    width: 100%;
+  }
+  .top-slider__title {
+    font-size: 38px;
+    line-height: 42px;
+  }
+  .top-slider .slick-dots {
+    right: 15px;
+    left: auto;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }

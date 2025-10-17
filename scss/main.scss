@@ -94,20 +94,21 @@
     background-image: url(../img/slider/bg-slider.png);
     background-repeat: no-repeat;
     background-position: center center;
-    min-height: 632px;
+    border: 1px solid green;
+    // min-height: 632px;
     &__container {
         max-width: 1460px;
         margin: 0 auto;
         padding: 0 15px;
         padding-left: 145px;
-        border: 1px dotted #ccc;
+        // margin-bottom: 42px;
     }
     &__inner {
         display: flex;
         justify-content: space-between;
     }
     &__content {
-        max-width: 570px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -130,7 +131,11 @@
     .slick-dots {
         display: flex;
         justify-content: center;
-        margin-top: -70px;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        // margin-top: -70px;
         li {
             margin: 0 5px;
         }
