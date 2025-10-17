@@ -7,11 +7,6 @@
     display: none;
 }
 
-// клик по заголовку не рабтает
-.footer-title--slide {
-        pointer-events: none;
-    }
-
 @media (max-width: 992px) {
     .menu {
         order: 1;
@@ -117,9 +112,6 @@
     .footer-top {
         justify-content: start;
     }
-    .footer-top__list--slide {
-        display: block;
-    }
 
 }
 
@@ -160,12 +152,34 @@
     }
     .footer-top__list--slide {
         display: none;
-        // в main.js при клике на заголовок, метод slideToggle()
-        // будет сам присваивать этому списку display:block
+        // display: none будет по умолчанию для экранов не шире 576px
+        // slideToggle() будет инлайново переопределять это св-во
     }
     .footer-title--slide {
-        pointer-events: auto;
-        // клик по заголовку по умолчанию
+        position: relative;
+        padding-left: 20px;
+        &:hover {
+            color: $accent-color;
+            cursor: pointer;
+            &::after {
+                border-bottom: 8px solid $accent-color;
+            }
+        }
     }
-
+    .footer-title--slide::after {
+        content: '';
+        position: absolute;
+        top: 33%;
+        // transform: translateY(-50%);
+        left: 0;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 8px solid $default-dark-color;
+        transition: transform 0.3s ease;
+    }
+    .footer-title--slide-active::after {
+        transform: rotate(180deg);
+    }
 }

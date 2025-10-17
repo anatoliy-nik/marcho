@@ -6,11 +6,23 @@ $(function () {
     });
 
     // при клике на заголовок
-     $('.footer-title--slide').on('click', function() {
-        // следующему элементу от ЭТОГО заголовка применяем метод slideToggle()
-        $(this).next().slideToggle();
-        // у ЭТОГО заголовка меняется стрелочка
-        $(this).toggleClass('footer-title--active')
+    $('.footer-title--slide').on('click', function() {
+        // если экран не шире 576 px
+        if ($(window).width() <= 576) {
+            // следующему элементу от ЭТОГО заголовка применяем метод slideToggle()
+            $(this).next().slideToggle();
+            // ЭТОМУ заголовку добавляем класс (для стилизации стрелочкой)
+            $(this).toggleClass('footer-title--slide-active')
+            } 
+    });
+
+    // при изменении размера окна
+    $(window).on('resize', function() {
+        // если экран шире 576 px
+        if ($(window).width() > 576) {
+            // убираем инлайн стиль
+            $('.footer-top__list--slide').css('display', ''); 
+        }
     });
 
     // Slick слайдер для анонса блога
