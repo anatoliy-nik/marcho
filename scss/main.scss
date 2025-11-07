@@ -94,7 +94,7 @@
     background-image: url(../img/slider/bg-slider.png);
     background-repeat: no-repeat;
     background-position: center center;
-    border: 1px solid green;
+    // border: 1px solid green;
     // min-height: 632px;
     &__container {
         max-width: 1460px;
@@ -192,6 +192,7 @@
         padding: 0px 0px;
         margin-bottom: 110px;
         position: relative;
+        column-gap: 30px;
         &::before {
             content: '';
             position: absolute;
@@ -218,7 +219,7 @@
         }
     }
     &__item {
-        width: 370px;
+        // width: 370px;
         padding: 60px 40px;
         box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
         background-color: #fff;

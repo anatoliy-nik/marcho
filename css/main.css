@@ -379,7 +379,6 @@ a {
   background-image: url(../img/slider/bg-slider.png);
   background-repeat: no-repeat;
   background-position: center center;
-  border: 1px solid green;
 }
 .top-slider__container {
   max-width: 1460px;
@@ -488,6 +487,9 @@ a {
   padding: 0px 0px;
   margin-bottom: 110px;
   position: relative;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
 }
 .advantages__list::before {
   content: "";
@@ -514,7 +516,6 @@ a {
   z-index: -1;
 }
 .advantages__item {
-  width: 370px;
   padding: 60px 40px;
   -webkit-box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
           box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
@@ -2676,6 +2677,14 @@ a {
   z-index: 1;
 }
 
+@media (max-width: 1300px) {
+  .advantages__list::before {
+    left: 0;
+  }
+  .advantages__list::after {
+    right: 0;
+  }
+}
 @media (max-width: 1200px) {
   .top-slider__container {
     padding-left: 15px;
@@ -2792,10 +2801,23 @@ a {
   }
   .top-slider__img {
     margin-right: -15px;
-    width: 40%;
   }
-  .top-slider__content {
-    width: 60%;
+  .section-title {
+    font-size: 38px;
+  }
+  .top-categories__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .top-categories__item:nth-child(1) {
+    grid-row: auto;
+  }
+  .top-categories__item:nth-child(2) {
+    grid-column: auto;
+    display: block;
+  }
+  .top-categories__item {
+    background-position: top right;
+    padding: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -2813,11 +2835,19 @@ a {
         -ms-flex-pack: start;
             justify-content: start;
   }
-  .top-slider .slick-slide img {
-    display: none;
+  .advantages__list {
+    display: block;
   }
-  .top-slider__content {
-    width: 80%;
+  .advantages__item {
+    padding: 30px 20px;
+  }
+  .top-categories__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 15px;
+  }
+  .top-categories__item {
+    background-position: center center;
   }
 }
 @media (max-width: 576px) {
@@ -2908,5 +2938,11 @@ a {
     left: auto;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+  .top-slider .slick-slide img {
+    display: none;
+  }
+  .section-title {
+    font-size: 28px;
   }
 }
