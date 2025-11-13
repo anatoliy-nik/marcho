@@ -103,7 +103,8 @@ $(function () {
 
     // Попап
     Fancybox.bind("[data-fancybox]", {
-        // Your custom options
+        maxWidth: "90vw",
+        maxHeight: "90vh"
     });
 
     // Звездный рейтинг

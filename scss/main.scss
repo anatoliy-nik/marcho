@@ -351,10 +351,12 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        column-gap: 30px;
     }
     &__box {
-        max-width: 535px;
-        width: 100%;
+        // max-width: 535px;
+        // width: 100%;
+        width: 50%;
         height: 480px;
         display: flex;
         justify-content: center;
@@ -365,7 +367,8 @@
         background-size: cover;
     }
     &__descr {
-        max-width: 570px;
+        // max-width: 570px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -574,6 +577,9 @@
         justify-content: space-between;
         align-items: center;
     }
+    &__link-img {
+        height: 60px;
+    }
 }
 
 // blog
@@ -595,6 +601,7 @@
     display: flex;
     justify-content: space-between;
     position:relative;
+    column-gap: 30px;
     &::before {
         content: '';
         position: absolute;
@@ -608,7 +615,7 @@
         z-index: -1;
     }
     &__item {
-        max-width: 370px;
+        // max-width: 370px;
         border: 1px solid #ececec;
         transition: all .3s;
     }
@@ -629,8 +636,7 @@
             // всегда надо делать для img, т.к. могут быть разные
             width: 370px;
             height: 280px;
-            // самой картинке задается width и height,
-            // а ее родителю max-width
+            // самой картинке надо задавать width и height
         }
     }
     &__item-content {
@@ -773,10 +779,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        column-gap: 30px;
     }
     &__content {
-        max-width: 570px;
-        width: 100%;
+        // max-width: 570px;
+        // width: 100%;
     }
     &__title {
         font-family: 'Roboto-Bold', sans-serif;
@@ -791,7 +798,10 @@
         margin-bottom: 60px;
     }
     &__img {
-        width: 570px;
+        // width: 570px;
+        width: 60%;
+        height: 500px;
+        object-fit: cover;
     }
 }
 
@@ -1666,7 +1676,7 @@
 // blog-page
 
 .blog-page {
-    padding: 110px 50px;
+    padding: 110px 0px;
 }
 
 .blog-page-wrapper {
@@ -1677,8 +1687,9 @@
 // blog-page-content
 
 .blog-page-content {
-    flex: 2;
-    border: 1px dotted #5800e4;
+    // flex: 2;
+    // border: 1px dotted #5800e4;
+    width: 67%;
 }
 
 .blog-page-item {
@@ -1687,10 +1698,11 @@
     &__content {
         padding: 40px;
     }
-    &__img-link, .blog-page-item__img-slider, .blog-page-item__img-popup {
+    &__img-link, .blog-page-item__img-popup {
         img {
             object-fit: cover;
-            width: 770px;
+            // max-width: 770px;
+            width: 100%;
             height: 450px;
         }
     }
@@ -1710,10 +1722,6 @@
     &__info.blog-box__info {
         justify-content: start;
         column-gap: 30px;
-    }
-    &__img-slider {
-        width: 770px;
-        // height: 450px;
     }
     &--slider {
         .slick-arrow {
@@ -1771,11 +1779,20 @@
     }
 }
 
+.blog-page-item__img-slider {
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 450px;
+    }
+}
+
 // blog-page-aside
 
 .blog-page-aside {
-    flex: 1;
-    border: 1px dotted #5800e4;
+    // flex: 1;
+    // border: 1px dotted #5800e4;
+    width: 31%;
     &__item {
         padding: 40px 30px;
         border: 1px solid #ececec;
@@ -2181,7 +2198,7 @@
     }
     &__form {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: center;
     }
     &__form-input {
