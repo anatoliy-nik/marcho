@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog</title>
+    <title>Marcho</title>
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/fancybox.css">
     <link rel="stylesheet" href="css/star-rating-svg.css">
@@ -23,9 +23,12 @@
                     <img src="img/logo.png" alt="logo">
                 </a>
                 <nav class="menu">
+                    <button class="burger-btn">
+                        <span></span>
+                    </button>
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link menu__link--active" href="/">Home</a>
+                            <a class="menu__link" href="/">Home</a>
                         </li>
                         <li class="menu__item">
                             <a class="menu__link" href="/catalog.html">Catalog</a>
@@ -96,6 +99,13 @@
         <section class="catalog">
             <div class="container">
                 <div class="catalog__wrapper">
+                    <button class="filters-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M96 128C83.1 128 71.4 135.8 66.4 147.8C61.4 159.8 64.2 173.5 73.4 182.6L256 365.3L256 480C256 488.5 259.4 496.6 265.4 502.6L329.4 566.6C338.6 575.8 352.3 578.5 364.3 573.5C376.3 568.5 384 556.9 384 544L384 365.3L566.6 182.7C575.8 173.5 578.5 159.8 573.5 147.8C568.5 135.8 556.9 128 544 128L96 128z" />
+                        </svg>
+                    </button>
                     <!-- catalog__filters -->
                     <div class="catalog__filters">
                         <!-- search -->
@@ -152,8 +162,7 @@
                                         <label class="color-filter__label">
                                             <span class="color-filter__color">Orange (11)</span>
                                             <input class="color-filter__input visually-hidden" type="checkbox">
-                                            <span
-                                                class="color-filter__checkmark filter-orange"></span>
+                                            <span class="color-filter__checkmark filter-orange"></span>
                                         </label>
                                     </li>
                                     <li class="color-filter__item">
@@ -167,8 +176,7 @@
                                         <label class="color-filter__label">
                                             <span class="color-filter__color">Purple (21)</span>
                                             <input class="color-filter__input visually-hidden" type="checkbox">
-                                            <span
-                                                class="color-filter__checkmark filter-violett"></span>
+                                            <span class="color-filter__checkmark filter-violett"></span>
                                         </label>
                                     </li>
                                 </ul>
@@ -627,13 +635,12 @@
                             <ul class="pagination__list">
                                 <li class="pagination__item">
                                     <a class="pagination__link pagination__link--prev" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="4.969" height="9.97"
-                                            viewBox="0 0 4.969 9.97">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.969 9.97">
                                             <path fill="#8d8d8d" fill-rule="evenodd"
                                                 d="M973.64,3013.16a0.745,0.745,0,0,1,.178-0.49l3.741-4.28a0.548,0.548,0,0,1,.863,0,0.762,0.762,0,0,1,0,.98l-3.311,3.79,3.31,3.79a0.776,0.776,0,0,1,0,.99,0.56,0.56,0,0,1-.862,0l-3.741-4.28a0.772,0.772,0,0,1-.178-0.5h0Zm0,0"
                                                 transform="translate(-973.625 -3008.19)" />
                                         </svg>
-                                        Previous
+                                        <span>Previous</span>
                                     </a>
                                 </li>
                                 <li class="pagination__item">
@@ -653,9 +660,8 @@
                                 </li>
                                 <li class="pagination__item">
                                     <a class="pagination__link pagination__link--next" href="#">
-                                        Next
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="10"
-                                            viewBox="0 0 5 10">
+                                        <span>Next</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 10">
                                             <path fill="#8d8d8d" fill-rule="evenodd"
                                                 d="M1347,3013.18a0.816,0.816,0,0,0-.17-0.5l-3.77-4.29a0.556,0.556,0,0,0-.87,0,0.771,0.771,0,0,0,0,.99l3.33,3.8-3.33,3.8a0.771,0.771,0,0,0,0,.99,0.568,0.568,0,0,0,.87,0l3.77-4.3a0.715,0.715,0,0,0,.17-0.49h0Zm0,0"
                                                 transform="translate(-1342 -3008.19)" />
@@ -746,8 +752,8 @@
                     </ul>
                 </div>
                 <div class="footer-top__item footer-top__info">
-                    <h6 class="footer-title">Useful Links</h6>
-                    <ul class="footer-top__list">
+                    <h6 class="footer-title footer-title--slide">Useful Links</h6>
+                    <ul class="footer-top__list footer-top__list--slide">
                         <li class="footer-top__list-item">
                             <a class="footer-top__list-link" href="#">About Us</a>
                         </li>
@@ -766,8 +772,8 @@
                     </ul>
                 </div>
                 <div class="footer-top__item footer-top__info">
-                    <h6 class="footer-title">My Account</h6>
-                    <ul class="footer-top__list">
+                    <h6 class="footer-title footer-title--slide">My Account</h6>
+                    <ul class="footer-top__list footer-top__list--slide">
                         <li class="footer-top__list-item">
                             <a class="footer-top__list-link" href="#">My Account</a>
                         </li>
