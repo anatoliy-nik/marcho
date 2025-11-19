@@ -5,6 +5,12 @@ $(function () {
         $('.burger-btn').toggleClass('burger-btn--active');
     });
 
+    //кнопка для показа фильтров в каталоге
+    $('.filters-btn').on('click', function() {
+        $('.catalog__filters').toggleClass('catalog__filters--show');
+        $('.filters-btn').toggleClass('filters-btn--active');
+    });
+
     // при клике на заголовок
     $('.footer-title--slide').on('click', function() {
         // если экран не шире 576 px
